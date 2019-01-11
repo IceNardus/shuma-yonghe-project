@@ -17,7 +17,6 @@
         <module name="yonghe-hystrix-dashboard" />
         <module name="yonghe-min-feign" />
         <module name="yonghe-turbine-stream-rabbitmq" />
-        <module name="yonghe-zipkin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

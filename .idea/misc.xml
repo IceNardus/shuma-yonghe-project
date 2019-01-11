@@ -13,7 +13,6 @@
         <option value="$PROJECT_DIR$/yonghe-min-feign/pom.xml" />
         <option value="$PROJECT_DIR$/yonghe-hystrix-dashboard/pom.xml" />
         <option value="$PROJECT_DIR$/yonghe-api-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/yonghe-zipkin/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

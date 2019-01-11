@@ -15,7 +15,6 @@
       <module fileurl="file://$PROJECT_DIR$/yonghe-min-feign/yonghe-min-feign.iml" filepath="$PROJECT_DIR$/yonghe-min-feign/yonghe-min-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/yonghe-min-parent/yonghe-min-parent.iml" filepath="$PROJECT_DIR$/yonghe-min-parent/yonghe-min-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/yonghe-turbine-stream-rabbitmq/yonghe-turbine-stream-rabbitmq.iml" filepath="$PROJECT_DIR$/yonghe-turbine-stream-rabbitmq/yonghe-turbine-stream-rabbitmq.iml" />
-      <module fileurl="file://$PROJECT_DIR$/yonghe-zipkin/yonghe-zipkin.iml" filepath="$PROJECT_DIR$/yonghe-zipkin/yonghe-zipkin.iml" />
     </modules>
   </component>
 </project>
