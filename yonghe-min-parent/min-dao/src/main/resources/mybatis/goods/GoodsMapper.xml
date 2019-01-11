@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoperun.shuma.module.mapper.GoodsMapper" >
+  <resultMap id="BaseResultMap" type="com.hoperun.shuma.bean.Goods" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="delete_status" property="deleteStatus" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="brand_id" property="brandId" jdbcType="INTEGER" />
+    <result column="category_id" property="categoryId" jdbcType="INTEGER" />
+    <result column="detail" property="detail" jdbcType="VARCHAR" />
+    <result column="end_time" property="endTime" jdbcType="TIMESTAMP" />
+    <result column="freight_type" property="freightType" jdbcType="VARCHAR" />
+    <result column="goods_url" property="goodsUrl" jdbcType="VARCHAR" />
+    <result column="integral_offset" property="integralOffset" jdbcType="BIT" />
+    <result column="is_flash_sale" property="isFlashSale" jdbcType="BIT" />
+    <result column="is_recommend" property="isRecommend" jdbcType="BIT" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="numbering" property="numbering" jdbcType="VARCHAR" />
+    <result column="pic_url" property="picUrl" jdbcType="VARCHAR" />
+    <result column="restriction" property="restriction" jdbcType="BIT" />
+    <result column="restriction_count" property="restrictionCount" jdbcType="INTEGER" />
+    <result column="sale" property="sale" jdbcType="BIT" />
+    <result column="shelf" property="shelf" jdbcType="BIT" />
+    <result column="show_pic" property="showPic" jdbcType="VARCHAR" />
+    <result column="start_time" property="startTime" jdbcType="TIMESTAMP" />
+    <result column="sub" property="sub" jdbcType="VARCHAR" />
+    <result column="use_coupon" property="useCoupon" jdbcType="BIT" />
+    <result column="restriction_time" property="restrictionTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, create_time, delete_status, update_time, brand_id, category_id, detail, end_time, 
+    freight_type, goods_url, integral_offset, is_flash_sale, is_recommend, name, numbering, 
+    pic_url, restriction, restriction_count, sale, shelf, show_pic, start_time, sub, 
+    use_coupon,restriction_time
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from eshop_goods_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from eshop_goods_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hoperun.shuma.bean.Goods" useGeneratedKeys="true" keyProperty="T.id">
+    insert into eshop_goods_${tablePrefix} (id, create_time, delete_status, 
+      update_time, brand_id, category_id, 
+      detail, end_time, freight_type, 
+      goods_url, integral_offset, is_flash_sale, 
+      is_recommend, name, numbering, 
+      pic_url, restriction, restriction_count, 
+      sale, shelf, show_pic, start_time, 
+      sub, use_coupon,restriction_time)
+    values (#{T.id,jdbcType=INTEGER}, #{T.createTime,jdbcType=TIMESTAMP}, #{T.deleteStatus,jdbcType=VARCHAR}, 
+      #{T.updateTime,jdbcType=TIMESTAMP}, #{T.brandId,jdbcType=INTEGER}, #{T.categoryId,jdbcType=INTEGER}, 
+      #{T.detail,jdbcType=VARCHAR}, #{T.endTime,jdbcType=TIMESTAMP}, #{T.freightType,jdbcType=VARCHAR}, 
+      #{T.goodsUrl,jdbcType=VARCHAR}, #{T.integralOffset,jdbcType=BIT}, #{T.isFlashSale,jdbcType=BIT}, 
+      #{T.isRecommend,jdbcType=BIT}, #{T.name,jdbcType=VARCHAR}, #{T.numbering,jdbcType=VARCHAR}, 
+      #{T.picUrl,jdbcType=VARCHAR}, #{T.restriction,jdbcType=BIT}, #{T.restrictionCount,jdbcType=INTEGER}, 
+      #{T.sale,jdbcType=BIT}, #{T.shelf,jdbcType=BIT}, #{T.showPic,jdbcType=VARCHAR}, #{T.startTime,jdbcType=TIMESTAMP}, 
+      #{T.sub,jdbcType=VARCHAR}, #{T.useCoupon,jdbcType=BIT}, #{T.restrictionTime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hoperun.shuma.bean.Goods" useGeneratedKeys="true" keyProperty="T.id">
+    insert into eshop_goods_${tablePrefix}
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="T.id != null" >
+        id,
+      </if>
+      <if test="T.createTime != null" >
+        create_time,
+      </if>
+      <if test="T.deleteStatus != null" >
+        delete_status,
+      </if>
+      <if test="T.updateTime != null" >
+        update_time,
+      </if>
+      <if test="T.brandId != null" >
+        brand_id,
+      </if>
+      <if test="T.categoryId != null" >
+        category_id,
+      </if>
+      <if test="T.detail != null" >
+        detail,
+      </if>
+      <if test="T.endTime != null" >
+        end_time,
+      </if>
+      <if test="T.freightType != null" >
+        freight_type,
+      </if>
+      <if test="T.goodsUrl != null" >
+        goods_url,
+      </if>
+      <if test="T.integralOffset != null" >
+        integral_offset,
+      </if>
+      <if test="T.isFlashSale != null" >
+        is_flash_sale,
+      </if>
+      <if test="T.isRecommend != null" >
+        is_recommend,
+      </if>
+      <if test="T.name != null" >
+        name,
+      </if>
+      <if test="T.numbering != null" >
+        numbering,
+      </if>
+      <if test="T.picUrl != null" >
+        pic_url,
+      </if>
+      <if test="T.restriction != null" >
+        restriction,
+      </if>
+      <if test="T.restrictionCount != null" >
+        restriction_count,
+      </if>
+      <if test="T.sale != null" >
+        sale,
+      </if>
+      <if test="T.shelf != null" >
+        shelf,
+      </if>
+      <if test="T.showPic != null" >
+        show_pic,
+      </if>
+      <if test="T.startTime != null" >
+        start_time,
+      </if>
+      <if test="T.sub != null" >
+        sub,
+      </if>
+      <if test="T.useCoupon != null" >
+        use_coupon,
+      </if>
+
+      <if test="T.restrictionTime != null" >
+        restriction_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="T.id != null" >
+        #{T.id,jdbcType=INTEGER},
+      </if>
+      <if test="T.createTime != null" >
+        #{T.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.deleteStatus != null" >
+        #{T.deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="T.updateTime != null" >
+        #{T.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.brandId != null" >
+        #{T.brandId,jdbcType=INTEGER},
+      </if>
+      <if test="T.categoryId != null" >
+        #{T.categoryId,jdbcType=INTEGER},
+      </if>
+      <if test="T.detail != null" >
+        #{T.detail,jdbcType=VARCHAR},
+      </if>
+      <if test="T.endTime != null" >
+        #{T.endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.freightType != null" >
+        #{T.freightType,jdbcType=VARCHAR},
+      </if>
+      <if test="T.goodsUrl != null" >
+        #{T.goodsUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="T.integralOffset != null" >
+        #{T.integralOffset,jdbcType=BIT},
+      </if>
+      <if test="T.isFlashSale != null" >
+        #{T.isFlashSale,jdbcType=BIT},
+      </if>
+      <if test="T.isRecommend != null" >
+        #{T.isRecommend,jdbcType=BIT},
+      </if>
+      <if test="T.name != null" >
+        #{T.name,jdbcType=VARCHAR},
+      </if>
+      <if test="T.numbering != null" >
+        #{T.numbering,jdbcType=VARCHAR},
+      </if>
+      <if test="T.picUrl != null" >
+        #{T.picUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="T.restriction != null" >
+        #{T.restriction,jdbcType=BIT},
+      </if>
+      <if test="T.restrictionCount != null" >
+        #{T.restrictionCount,jdbcType=INTEGER},
+      </if>
+      <if test="T.sale != null" >
+        #{T.sale,jdbcType=BIT},
+      </if>
+      <if test="T.shelf != null" >
+        #{T.shelf,jdbcType=BIT},
+      </if>
+      <if test="T.showPic != null" >
+        #{T.showPic,jdbcType=VARCHAR},
+      </if>
+      <if test="T.startTime != null" >
+        #{T.startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.sub != null" >
+        #{T.sub,jdbcType=VARCHAR},
+      </if>
+      <if test="T.useCoupon != null" >
+        #{T.useCoupon,jdbcType=BIT},
+      </if>
+
+      <if test="T.restrictionTime != null" >
+        #{T.restrictionTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hoperun.shuma.bean.Goods" >
+    update eshop_goods_${tablePrefix}
+    <set >
+      <if test="T.createTime != null" >
+        create_time = #{T.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.deleteStatus != null" >
+        delete_status = #{T.deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="T.updateTime != null" >
+        update_time = #{T.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.brandId != null" >
+        brand_id = #{T.brandId,jdbcType=INTEGER},
+      </if>
+      <if test="T.categoryId != null" >
+        category_id = #{T.categoryId,jdbcType=INTEGER},
+      </if>
+      <if test="T.detail != null" >
+        detail = #{T.detail,jdbcType=VARCHAR},
+      </if>
+      <if test="T.endTime != null" >
+        end_time = #{T.endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.freightType != null" >
+        freight_type = #{T.freightType,jdbcType=VARCHAR},
+      </if>
+      <if test="T.goodsUrl != null" >
+        goods_url = #{T.goodsUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="T.integralOffset != null" >
+        integral_offset = #{T.integralOffset,jdbcType=BIT},
+      </if>
+      <if test="T.isFlashSale != null" >
+        is_flash_sale = #{T.isFlashSale,jdbcType=BIT},
+      </if>
+      <if test="T.isRecommend != null" >
+        is_recommend = #{T.isRecommend,jdbcType=BIT},
+      </if>
+      <if test="T.name != null" >
+        name = #{T.name,jdbcType=VARCHAR},
+      </if>
+      <if test="T.numbering != null" >
+        numbering = #{T.numbering,jdbcType=VARCHAR},
+      </if>
+      <if test="T.picUrl != null" >
+        pic_url = #{T.picUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="T.restriction != null" >
+        restriction = #{T.restriction,jdbcType=BIT},
+      </if>
+      <if test="T.restrictionCount != null" >
+        restriction_count = #{T.restrictionCount,jdbcType=INTEGER},
+      </if>
+      <if test="T.sale != null" >
+        sale = #{T.sale,jdbcType=BIT},
+      </if>
+      <if test="T.shelf != null" >
+        shelf = #{T.shelf,jdbcType=BIT},
+      </if>
+      <if test="T.showPic != null" >
+        show_pic = #{T.showPic,jdbcType=VARCHAR},
+      </if>
+      <if test="T.startTime != null" >
+        start_time = #{T.startTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.sub != null" >
+        sub = #{T.sub,jdbcType=VARCHAR},
+      </if>
+      <if test="T.useCoupon != null" >
+        use_coupon = #{T.useCoupon,jdbcType=BIT},
+      </if>
+      <if test="T.restrictionTime != null" >
+        restriction_time = #{T.restrictionTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{T.id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hoperun.shuma.bean.Goods" >
+    update eshop_goods_${tablePrefix}
+    set create_time = #{T.createTime,jdbcType=TIMESTAMP},
+      delete_status = #{T.deleteStatus,jdbcType=VARCHAR},
+      update_time = #{T.updateTime,jdbcType=TIMESTAMP},
+      brand_id = #{T.brandId,jdbcType=INTEGER},
+      category_id = #{T.categoryId,jdbcType=INTEGER},
+      detail = #{T.detail,jdbcType=VARCHAR},
+      end_time = #{T.endTime,jdbcType=TIMESTAMP},
+      freight_type = #{T.freightType,jdbcType=VARCHAR},
+      goods_url = #{T.goodsUrl,jdbcType=VARCHAR},
+      integral_offset = #{T.integralOffset,jdbcType=BIT},
+      is_flash_sale = #{T.isFlashSale,jdbcType=BIT},
+      is_recommend = #{T.isRecommend,jdbcType=BIT},
+      name = #{T.name,jdbcType=VARCHAR},
+      numbering = #{T.numbering,jdbcType=VARCHAR},
+      pic_url = #{T.picUrl,jdbcType=VARCHAR},
+      restriction = #{T.restriction,jdbcType=BIT},
+      restriction_count = #{T.restrictionCount,jdbcType=INTEGER},
+      sale = #{T.sale,jdbcType=BIT},
+      shelf = #{T.shelf,jdbcType=BIT},
+      show_pic = #{T.showPic,jdbcType=VARCHAR},
+      start_time = #{T.startTime,jdbcType=TIMESTAMP},
+      sub = #{T.sub,jdbcType=VARCHAR},
+      use_coupon = #{T.useCoupon,jdbcType=BIT},
+      restriction_time = #{T.restrictionTime,jdbcType=TIMESTAMP}
+    where id = #{T.id,jdbcType=INTEGER}
+  </update>
+</mapper>

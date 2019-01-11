@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: yonghe-turbine-stream-rabbitmq
+  rabbitmq:
+     host: 10.20.0.66
+     port: 5672
+     username: shuma
+     password: q1w2e3r4
+eureka:
+  client:
+    service-url:
+      client:
+          registerWithEureka: false
+          fetchRegistry: false
+          defaultZone: http://localhost:8761/yonghe/

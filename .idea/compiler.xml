@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="min-api" />
+        <module name="min-bean" />
+        <module name="min-common" />
+        <module name="min-dao" />
+        <module name="min-service" />
+        <module name="yonghe" />
+        <module name="yonghe-api-gateway" />
+        <module name="yonghe-config-server" />
+        <module name="yonghe-hystrix-dashboard" />
+        <module name="yonghe-min-feign" />
+        <module name="yonghe-turbine-stream-rabbitmq" />
+        <module name="yonghe-zipkin" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bkc-min-parent" target="1.8" />
+      <module name="coucou-giftcard-api" target="1.8" />
+      <module name="coucou-giftcard-parent" target="1.8" />
+      <module name="min-api" target="1.8" />
+      <module name="min-bean" target="1.8" />
+      <module name="min-common" target="1.8" />
+      <module name="min-dao" target="1.8" />
+      <module name="min-service" target="1.8" />
+      <module name="shuama-coucou-project" target="1.5" />
+      <module name="shuma-yonghe-project" target="1.5" />
+      <module name="yonghe" target="1.8" />
+      <module name="yonghe-api-gateway" target="1.8" />
+      <module name="yonghe-config-server" target="1.8" />
+      <module name="yonghe-hystrix-dashboard" target="1.8" />
+      <module name="yonghe-min-feign" target="1.8" />
+      <module name="yonghe-min-parent" target="1.8" />
+      <module name="yonghe-turbine-stream-rabbitmq" target="1.8" />
+      <module name="yonghe-zipkin" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

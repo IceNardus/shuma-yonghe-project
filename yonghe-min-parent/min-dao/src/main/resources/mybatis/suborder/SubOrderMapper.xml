@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoperun.shuma.module.mapper.SubOrderMapper" >
+  <resultMap id="BaseResultMap" type="com.hoperun.shuma.bean.SubOrder" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="delete_status" property="deleteStatus" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="actual_amount" property="actualAmount" jdbcType="DOUBLE" />
+    <result column="amount" property="amount" jdbcType="DOUBLE" />
+    <result column="count" property="count" jdbcType="INTEGER" />
+    <result column="goods_attributes" property="goodsAttributes" jdbcType="VARCHAR" />
+    <result column="goods_id" property="goodsId" jdbcType="INTEGER" />
+    <result column="goods_intro" property="goodsIntro" jdbcType="VARCHAR" />
+    <result column="goods_name" property="goodsName" jdbcType="VARCHAR" />
+    <result column="goods_price" property="goodsPrice" jdbcType="DOUBLE" />
+    <result column="handlers" property="handlers" jdbcType="VARCHAR" />
+    <result column="order_id" property="orderId" jdbcType="INTEGER" />
+    <result column="refund_status" property="refundStatus" jdbcType="VARCHAR" />
+    <result column="show_img" property="showImg" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="integral" property="integral" jdbcType="INTEGER" />
+    <result column="integrals" property="integral" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, create_time, delete_status, update_time, actual_amount, amount, count, goods_attributes, 
+    goods_id, goods_intro, goods_name, goods_price, handlers,  order_id, refund_status,
+    show_img, status, integral,integrals
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from eshop_sub_order_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from eshop_sub_order_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hoperun.shuma.bean.SubOrder" useGeneratedKeys="true" keyProperty="T.id">
+    insert into eshop_sub_order_${tablePrefix} (id, create_time, delete_status, 
+      update_time, actual_amount, amount, 
+      count, goods_attributes, goods_id, 
+      goods_intro, goods_name, goods_price, 
+      handlers,  order_id,
+      refund_status, show_img, status, integral,integrals
+      )
+    values (#{T.id,jdbcType=INTEGER}, #{T.createTime,jdbcType=TIMESTAMP}, #{T.deleteStatus,jdbcType=VARCHAR}, 
+      #{T.updateTime,jdbcType=TIMESTAMP}, #{T.actualAmount,jdbcType=DOUBLE}, #{T.amount,jdbcType=DOUBLE}, 
+      #{T.count,jdbcType=INTEGER}, #{T.goodsAttributes,jdbcType=VARCHAR}, #{T.goodsId,jdbcType=INTEGER}, 
+      #{T.goodsIntro,jdbcType=VARCHAR}, #{T.goodsName,jdbcType=VARCHAR}, #{T.goodsPrice,jdbcType=DOUBLE}, 
+      #{T.handlers,jdbcType=VARCHAR},  #{T.orderId,jdbcType=INTEGER},
+      #{T.refundStatus,jdbcType=VARCHAR}, #{T.showImg,jdbcType=VARCHAR}, #{T.status,jdbcType=VARCHAR},#{T.integral,jdbcType=INTEGER},#{T.integrals,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.hoperun.shuma.bean.SubOrder" useGeneratedKeys="true" keyProperty="T.id">
+    insert into eshop_sub_order_${tablePrefix}
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="T.id != null" >
+        id,
+      </if>
+      <if test="T.createTime != null" >
+        create_time,
+      </if>
+      <if test="T.deleteStatus != null" >
+        delete_status,
+      </if>
+      <if test="T.updateTime != null" >
+        update_time,
+      </if>
+      <if test="T.actualAmount != null" >
+        actual_amount,
+      </if>
+      <if test="T.amount != null" >
+        amount,
+      </if>
+      <if test="T.count != null" >
+        count,
+      </if>
+      <if test="T.goodsAttributes != null" >
+        goods_attributes,
+      </if>
+      <if test="T.goodsId != null" >
+        goods_id,
+      </if>
+      <if test="T.goodsIntro != null" >
+        goods_intro,
+      </if>
+      <if test="T.goodsName != null" >
+        goods_name,
+      </if>
+      <if test="T.goodsPrice != null" >
+        goods_price,
+      </if>
+      <if test="T.handlers != null" >
+        handlers,
+      </if>
+
+      <if test="T.orderId != null" >
+        order_id,
+      </if>
+      <if test="T.refundStatus != null" >
+        refund_status,
+      </if>
+      <if test="T.showImg != null" >
+        show_img,
+      </if>
+      <if test="T.status != null" >
+        status,
+      </if>
+      <if test="T.integral != null" >
+        integral,
+      </if>
+      <if test="T.integrals != null" >
+        integrals,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="T.id != null" >
+        #{T.id,jdbcType=INTEGER},
+      </if>
+      <if test="T.createTime != null" >
+        #{T.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.deleteStatus != null" >
+        #{T.deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="T.updateTime != null" >
+        #{T.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.actualAmount != null" >
+        #{T.actualAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="T.amount != null" >
+        #{T.amount,jdbcType=DOUBLE},
+      </if>
+      <if test="T.count != null" >
+        #{T.count,jdbcType=INTEGER},
+      </if>
+      <if test="T.goodsAttributes != null" >
+        #{T.goodsAttributes,jdbcType=VARCHAR},
+      </if>
+      <if test="T.goodsId != null" >
+        #{T.goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="T.goodsIntro != null" >
+        #{T.goodsIntro,jdbcType=VARCHAR},
+      </if>
+      <if test="T.goodsName != null" >
+        #{T.goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="T.goodsPrice != null" >
+        #{T.goodsPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="T.handlers != null" >
+        #{T.handlers,jdbcType=VARCHAR},
+      </if>
+
+      <if test="T.orderId != null" >
+        #{T.orderId,jdbcType=INTEGER},
+      </if>
+      <if test="T.refundStatus != null" >
+        #{T.refundStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="T.showImg != null" >
+        #{T.showImg,jdbcType=VARCHAR},
+      </if>
+      <if test="T.status != null" >
+        #{T.status,jdbcType=VARCHAR},
+      </if>
+      <if test="T.integral != null" >
+        #{T.integral,jdbcType=INTEGER},
+      </if>
+      <if test="T.integrals != null" >
+        #{T.integrals,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hoperun.shuma.bean.SubOrder" >
+    update eshop_sub_order_${tablePrefix}
+    <set >
+      <if test="T.createTime != null" >
+        create_time = #{T.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.deleteStatus != null" >
+        delete_status = #{T.deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="T.updateTime != null" >
+        update_time = #{T.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.actualAmount != null" >
+        actual_amount = #{T.actualAmount,jdbcType=DOUBLE},
+      </if>
+      <if test="T.amount != null" >
+        amount = #{T.amount,jdbcType=DOUBLE},
+      </if>
+      <if test="T.count != null" >
+        count = #{T.count,jdbcType=INTEGER},
+      </if>
+      <if test="T.goodsAttributes != null" >
+        goods_attributes = #{T.goodsAttributes,jdbcType=VARCHAR},
+      </if>
+      <if test="T.goodsId != null" >
+        goods_id = #{T.goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="T.goodsIntro != null" >
+        goods_intro = #{T.goodsIntro,jdbcType=VARCHAR},
+      </if>
+      <if test="T.goodsName != null" >
+        goods_name = #{T.goodsName,jdbcType=VARCHAR},
+      </if>
+      <if test="T.goodsPrice != null" >
+        goods_price = #{T.goodsPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="T.handlers != null" >
+        handlers = #{T.handlers,jdbcType=VARCHAR},
+      </if>
+
+      <if test="T.orderId != null" >
+        order_id = #{T.orderId,jdbcType=INTEGER},
+      </if>
+      <if test="T.refundStatus != null" >
+        refund_status = #{T.refundStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="T.showImg != null" >
+        show_img = #{T.showImg,jdbcType=VARCHAR},
+      </if>
+      <if test="T.status != null" >
+        status = #{T.status,jdbcType=VARCHAR},
+      </if>
+      <if test="T.integral != null" >
+        integral = #{T.integral,jdbcType=INTEGER},
+      </if>
+      <if test="T.integrals != null" >
+        integrals = #{T.integrals,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{T.id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hoperun.shuma.bean.SubOrder" >
+    update eshop_sub_order_${tablePrefix}
+    set create_time = #{T.createTime,jdbcType=TIMESTAMP},
+      delete_status = #{T.deleteStatus,jdbcType=VARCHAR},
+      update_time = #{T.updateTime,jdbcType=TIMESTAMP},
+      actual_amount = #{T.actualAmount,jdbcType=DOUBLE},
+      amount = #{T.amount,jdbcType=DOUBLE},
+      count = #{T.count,jdbcType=INTEGER},
+      goods_attributes = #{T.goodsAttributes,jdbcType=VARCHAR},
+      goods_id = #{T.goodsId,jdbcType=INTEGER},
+      goods_intro = #{T.goodsIntro,jdbcType=VARCHAR},
+      goods_name = #{T.goodsName,jdbcType=VARCHAR},
+      goods_price = #{T.goodsPrice,jdbcType=DOUBLE},
+      handlers = #{T.handlers,jdbcType=VARCHAR},
+      order_id = #{T.orderId,jdbcType=INTEGER},
+      refund_status = #{T.refundStatus,jdbcType=VARCHAR},
+      show_img = #{T.showImg,jdbcType=VARCHAR},
+      status = #{T.status,jdbcType=VARCHAR},
+      integral= #{T.integral,jdbcType=INTEGER},
+      integrals= #{T.integrals,jdbcType=INTEGER}
+    where id = #{T.id,jdbcType=INTEGER}
+  </update>
+</mapper>

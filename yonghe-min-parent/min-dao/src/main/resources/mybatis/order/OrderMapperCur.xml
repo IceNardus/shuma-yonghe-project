@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>                                                                                                              
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoperun.shuma.module.mapper.OrderMapper">
+    <resultMap id="curResult" type="com.hoperun.shuma.dto.CurOrderDTO">
+        <id column="id" property="orderId" jdbcType="INTEGER"/>
+        <result column="no" property="orderNo" jdbcType="VARCHAR"/>
+        <result column="address" property="shoppingAddress" jdbcType="INTEGER"/>
+        <result column="city" property="city" jdbcType="VARCHAR"/>
+        <result column="addname" property="shoppingAdderessName" jdbcType="VARCHAR"/>
+        <result column="iphone" property="iphone" jdbcType="VARCHAR"/>
+        <result column="goodsamount" property="amount" jdbcType="VARCHAR"/>
+        <result column="famount" property="FreightAmount" jdbcType="VARCHAR"/>
+        <result column="logisticsno" property="logisticsNo" jdbcType="VARCHAR"/>
+        <result column="receipttime" property="receiptTime" jdbcType="VARCHAR"/>
+		<result column="invoice_no" property="invoiceNo" jdbcType="VARCHAR" />
+		<result column="invoice_title" property="invoiceTitle" jdbcType="VARCHAR" />
+		<result column="invoice_type" property="invoiceType" jdbcType="VARCHAR" />
+		<result column="make_invoice_type" property="makeInvoiceType" jdbcType="VARCHAR" />
+		<result column="email" property="email" jdbcType="VARCHAR" />
+		<result column="phone" property="phone" jdbcType="VARCHAR" />
+		<result column="brand_id" property="brandId" jdbcType="VARCHAR" />
+        <collection  property="orderDetailList" ofType="com.hoperun.shuma.dto.OrderDetail">
+            <id column="did" property="id" jdbcType="INTEGER"/>
+        	<result column="createtime" property="createTime" jdbcType="TIMESTAMP"/>
+        	<result column="showimg" property="goodsShowImg" jdbcType="VARCHAR"/>
+        	<result column="gid" property="goodsId" jdbcType="INTEGER"/>
+        	<result column="name" property="goodsName" jdbcType="VARCHAR"/>
+        	<result column="intro" property="goodsIntro" jdbcType="VARCHAR"/>
+           	<result column="count" property="count" jdbcType="INTEGER"/>
+        	<result column="goodskg" property="detailKg" jdbcType="DOUBLE"/>
+        	<result column="price" property="price" jdbcType="DOUBLE"/>
+        	<result column="substatus" property="status" jdbcType="VARCHAR"/>
+        	<result column="restatus" property="refundStatus" jdbcType="VARCHAR"/>
+        	<result column="amount" property="amount" jdbcType="DOUBLE"/>
+        	<result column="inventory" property="inventory" jdbcType="INTEGER"/>
+         </collection >
+    </resultMap>
+    
+    <resultMap id="statusResult" type="com.hoperun.shuma.dto.OrderStatusDTO">
+        <result column="statuses" property="status" jdbcType="VARCHAR"/>
+    </resultMap>
+	
+	<resultMap id="Result" type="com.hoperun.shuma.dto.OrderDTO">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="no" property="orderId" jdbcType="VARCHAR"/>
+       
+        <collection  property="orderDetails" ofType="com.hoperun.shuma.dto.OrderDetail">
+            <id column="did" property="id" jdbcType="INTEGER"/>
+        	<result column="createtime" property="createTime" jdbcType="TIMESTAMP"/>
+        	<result column="showimg" property="goodsShowImg" jdbcType="VARCHAR"/>
+        	<result column="gid" property="goodsId" jdbcType="INTEGER"/>
+        	<result column="name" property="goodsName" jdbcType="VARCHAR"/>
+        	<result column="intro" property="goodsIntro" jdbcType="VARCHAR"/>
+           	<result column="count" property="count" jdbcType="INTEGER"/>
+        	<result column="goodskg" property="detailKg" jdbcType="DOUBLE"/>
+        	<result column="price" property="price" jdbcType="DOUBLE"/>
+        	<result column="substatus" property="status" jdbcType="VARCHAR"/>
+        	<result column="restatus" property="refundStatus" jdbcType="VARCHAR"/>
+        	<result column="amount" property="amount" jdbcType="VARCHAR"/>
+        	<result column="inventory" property="inventory" jdbcType="INTEGER"/>
+         </collection >
+      
+    </resultMap>
+	
+    <select id="selectOrderDetail"   resultMap="curResult">
+      select
+		t.id id
+		,t.order_no no
+		,a.address address
+		,a.name addname
+		,a.city city
+		,a.phone iphone
+		,t.gamount goodsamount
+		,t.freight_amount famount
+		,t.logistics_no logisticsno
+		,t.did did
+		,t.goods_name name
+		,t.showimg showimg
+		,t.create_time createtime
+		,t.goods_id gid
+		,t.intro intro
+		,t.count count
+		,t.goods_detail_kg goodskg
+		,t.goods_price price
+		,t.`status` substatus
+		,t.refund_status restatus
+		,t.amount amount
+		,l.inventory inventory
+		,t.receipt_time receipttime,
+		t.invoice_no, t.invoice_title, t.invoice_type, t.make_invoice_type, t.email, t.phone
+		 from
+ 		(select
+ 		   o.id,o.order_no,d.goods_id,d.goods_detail_id,d.id did
+ 		   ,d.goods_name,d.count,d.goods_detail_kg,d.goods_price
+ 		   ,d.`status`,d.refund_status,d.amount,d.create_time,o.shopping_address,d.show_img showimg
+ 		   ,o.amount gamount,o.freight_amount,logistics_no,receipt_time,d.goods_intro intro,
+ 		   o.invoice_no, o.invoice_title, o.invoice_type, o.make_invoice_type, o.email, o.phone
+ 		      from
+ 		      (select * from c_order where id=#{orderId} and delete_status !='Deleted' ) o
+ 		      left join
+ 		      c_order_detail d
+ 		      on o.id=d.order_id where d.delete_status !='Deleted'
+ 		      )
+ 		       t
+		inner join c_goods_detail l on t.goods_detail_id=l.id
+		LEFT join c_shopping_address a on t.shopping_address=a.id
+    </select>
+
+    <select id="getStatus"   resultMap="statusResult">
+      select 
+ 		  GROUP_CONCAT(status) statuses    from  
+ 		      (select * from c_order where id=#{param1} and delete_status != 'Deleted'  ) o
+ 		      left join 
+ 		      c_order_detail d 
+ 		      on o.id=d.order_id 
+			  	
+			GROUP BY o.id
+    </select> 
+    
+     <select id="getOrdersByStatus"   resultMap="Result">
+      select 
+		t.id id
+		,t.order_no no
+		,t.did did
+		,t.goods_name name
+		,t.showimg showimg
+		,t.cretime createtime
+		,t.goods_id gid
+		,t.intro intro
+		,t.count count
+		,t.goods_detail_kg goodskg
+		,t.goods_price price
+		,t.`status` substatus
+		,t.refund_status restatus
+		,t.amount amount
+		,l.inventory inventory
+		,t.ocreatetime ocreatetime
+		,t.updatetime utime
+		 from
+ 		(select 
+ 		   o.id,o.order_no,d.goods_id,d.goods_detail_id,d.id did
+ 		   ,d.goods_name,d.count,d.goods_detail_kg,d.goods_price
+ 		   ,d.`status`,d.refund_status,d.amount,d.create_time cretime
+ 		   ,o.create_time ocreatetime,o.update_time updatetime,d.show_img showimg ,d.goods_intro intro
+ 		      from  
+ 		      (
+			SELECT * FROM c_order where id in(select DISTINCT(r.id) from c_order r left join 
+ 		      c_order_detail d 
+ 		      on r.id=d.order_id  where r.member_id=#{param2} 
+ 		     <if test="param1 != null and param1 != ''" >
+ 		     	 and d.status=#{param1}   and (d.refund_status is NULL or d.refund_status in ('REJECT','CLOSE'))
+ 		     	 </if>      
+ 		      ) 
+ 		       ORDER BY
+					update_time DESC 
+ 		      LIMIT #{param3},#{param4}
+ 		     
+				) 
+				o
+ 		      left join 
+ 		      c_order_detail d 
+ 		      on o.id=d.order_id 
+ 		       <if test="param1 != null and param1 != ''" >
+ 		     	where  d.status=#{param1}   and (d.refund_status is NULL or d.refund_status in ('REJECT','CLOSE'))
+ 		     	 </if>
+ 		      ORDER BY
+					updatetime DESC )
+ 		       t 
+		inner join c_goods_detail l on t.goods_detail_id=l.id 
+		ORDER BY utime DESC 
+    </select>
+    
+    <select id="selectLimitFlag" resultType="java.lang.Integer">
+      SELECT id FROM c_order_detail WHERE order_id in
+      	(select id from c_order where member_id=#{param1} AND DATE_FORMAT(create_time, '%Y%m') = DATE_FORMAT(CURDATE() , '%Y%m')) 
+			AND goods_detail_id=#{param2}
+			AND limit_flag=1
+			AND status!='DEAL_CLOSE'
+    </select>
+
+	<select id="selectBrands" resultType="java.lang.String">
+		SELECT brand_id FROM c_order where status!='DEAL_CLOSE'
+	</select>
+</mapper>

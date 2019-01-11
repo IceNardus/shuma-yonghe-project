@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoperun.shuma.module.mapper.GoodsAttributeMapper" >
+  <resultMap id="cur" type="com.hoperun.shuma.dto.GoodsAttributeDto" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="parentId" property="parentId" jdbcType="INTEGER" />
+      <result column="attribute_id" property="attributeId" jdbcType="INTEGER" />
+  </resultMap>
+
+
+  <select id="selectAttributesByGoodsId" resultMap="cur" >
+    SELECT
+	g.id id,
+	a.NAME name,
+	a.parent_id parentId,
+	a.id attribute_id
+FROM
+	eshop_goods_attribute_${tablePrefix} g,
+	eshop_attribute a
+WHERE
+	g.goods_id = #{g}
+AND g.attribute_id = a.id
+AND delete_status = 'Valid'
+ORDER BY
+	parent_id;
+  </select>
+
+    <select id="getNameByIds" resultMap="cur" >
+        SELECT
+        g.id id,
+        a.NAME name,
+        a.parent_id parentId,
+	    a.id attribute_id
+        FROM
+        eshop_goods_attribute_${tablePrefix} g,
+        eshop_attribute a
+        WHERE
+        g.id in (${ids})
+        AND g.attribute_id = a.id
+        AND delete_status = 'Valid'
+    </select>
+
+</mapper>

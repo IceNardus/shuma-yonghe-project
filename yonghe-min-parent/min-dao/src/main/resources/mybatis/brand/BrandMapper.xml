@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoperun.shuma.module.mapper.BrandMapper" >
+  <resultMap id="BaseResultMap" type="com.hoperun.shuma.bean.Brand" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="delete_status" property="deleteStatus" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="cover_pic_url" property="coverPicUrl" jdbcType="VARCHAR" />
+    <result column="intro" property="intro" jdbcType="VARCHAR" />
+    <result column="is_show" property="isShow" jdbcType="BIT" />
+    <result column="lowest_price" property="lowestPrice" jdbcType="DOUBLE" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="pic_url" property="picUrl" jdbcType="VARCHAR" />
+    <result column="sort" property="sort" jdbcType="INTEGER" />
+    <result column="freight" property="freight" jdbcType="DOUBLE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, create_time, delete_status, update_time, cover_pic_url, intro, is_show, lowest_price, 
+    name, pic_url, sort,freight
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from eshop_brand_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from eshop_brand_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hoperun.shuma.bean.Brand" useGeneratedKeys="true" keyProperty="T.id">
+    insert into eshop_brand_${tablePrefix} (id, create_time, delete_status, 
+      update_time, cover_pic_url, intro, 
+      is_show, lowest_price, name, 
+      pic_url, sort,freight)
+    values (#{T.id,jdbcType=INTEGER}, #{T.createTime,jdbcType=TIMESTAMP}, #{T.deleteStatus,jdbcType=VARCHAR}, 
+      #{T.updateTime,jdbcType=TIMESTAMP}, #{T.coverPicUrl,jdbcType=VARCHAR}, #{T.intro,jdbcType=VARCHAR}, 
+      #{T.isShow,jdbcType=BIT}, #{T.lowestPrice,jdbcType=DOUBLE}, #{T.name,jdbcType=VARCHAR}, 
+      #{T.picUrl,jdbcType=VARCHAR}, #{T.sort,jdbcType=INTEGER}), #{T.freight,jdbcType=DOUBLE}
+  </insert>
+  <insert id="insertSelective" parameterType="com.hoperun.shuma.bean.Brand" useGeneratedKeys="true" keyProperty="T.id">
+    insert into eshop_brand_${tablePrefix}
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="T.id != null" >
+        id,
+      </if>
+      <if test="T.createTime != null" >
+        create_time,
+      </if>
+      <if test="T.deleteStatus != null" >
+        delete_status,
+      </if>
+      <if test="T.updateTime != null" >
+        update_time,
+      </if>
+      <if test="T.coverPicUrl != null" >
+        cover_pic_url,
+      </if>
+      <if test="T.intro != null" >
+        intro,
+      </if>
+      <if test="T.isShow != null" >
+        is_show,
+      </if>
+      <if test="T.lowestPrice != null" >
+        lowest_price,
+      </if>
+      <if test="T.name != null" >
+        name,
+      </if>
+      <if test="T.picUrl != null" >
+        pic_url,
+      </if>
+      <if test="T.sort != null" >
+        sort,
+      </if>
+      <if test="T.freight != null" >
+        freight,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="T.id != null" >
+        #{T.id,jdbcType=INTEGER},
+      </if>
+      <if test="T.createTime != null" >
+        #{T.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.deleteStatus != null" >
+        #{T.deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="T.updateTime != null" >
+        #{T.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.coverPicUrl != null" >
+        #{T.coverPicUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="T.intro != null" >
+        #{T.intro,jdbcType=VARCHAR},
+      </if>
+      <if test="T.isShow != null" >
+        #{T.isShow,jdbcType=BIT},
+      </if>
+      <if test="T.lowestPrice != null" >
+        #{T.lowestPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="T.name != null" >
+        #{T.name,jdbcType=VARCHAR},
+      </if>
+      <if test="T.picUrl != null" >
+        #{T.picUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="T.sort != null" >
+        #{T.sort,jdbcType=INTEGER},
+      </if>
+      <if test="T.freight != null" >
+        #{T.freight,jdbcType=DOUBLE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hoperun.shuma.bean.Brand" >
+    update eshop_brand_${tablePrefix}
+    <set >
+      <if test="T.createTime != null" >
+        create_time = #{T.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.deleteStatus != null" >
+        delete_status = #{T.deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="T.updateTime != null" >
+        update_time = #{T.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.coverPicUrl != null" >
+        cover_pic_url = #{T.coverPicUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="T.intro != null" >
+        intro = #{T.intro,jdbcType=VARCHAR},
+      </if>
+      <if test="T.isShow != null" >
+        is_show = #{T.isShow,jdbcType=BIT},
+      </if>
+      <if test="T.lowestPrice != null" >
+        lowest_price = #{T.lowestPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="T.name != null" >
+        name = #{T.name,jdbcType=VARCHAR},
+      </if>
+      <if test="T.picUrl != null" >
+        pic_url = #{T.picUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="T.sort != null" >
+        sort = #{T.sort,jdbcType=INTEGER},
+      </if>
+      <if test="T.freight != null" >
+        sort = #{T.freight,jdbcType=DOUBLE},
+      </if>
+    </set>
+    where id = #{T.id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hoperun.shuma.bean.Brand" >
+    update eshop_brand_${tablePrefix}
+    set create_time = #{T.createTime,jdbcType=TIMESTAMP},
+      delete_status = #{T.deleteStatus,jdbcType=VARCHAR},
+      update_time = #{T.updateTime,jdbcType=TIMESTAMP},
+      cover_pic_url = #{T.coverPicUrl,jdbcType=VARCHAR},
+      intro = #{T.intro,jdbcType=VARCHAR},
+      is_show = #{T.isShow,jdbcType=BIT},
+      lowest_price = #{T.lowestPrice,jdbcType=DOUBLE},
+      name = #{T.name,jdbcType=VARCHAR},
+      pic_url = #{T.picUrl,jdbcType=VARCHAR},
+      freight = #{T.freight,jdbcType=VARCHAR},
+      sort = #{T.sort,jdbcType=DOUBLE},
+    where id = #{T.id,jdbcType=INTEGER}
+  </update>
+
+  <select id="getBrands" resultMap="BaseResultMap"  >
+    select
+    <include refid="Base_Column_List" />
+    from eshop_brand_${tablePrefix}
+    where delete_status = 'Valid'
+  </select>
+</mapper>

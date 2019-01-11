@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoperun.shuma.module.mapper.RefundMapper" >
+  <resultMap id="BaseResultMap" type="com.hoperun.shuma.bean.Refund" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="delete_status" property="deleteStatus" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="amount" property="amount" jdbcType="DOUBLE" />
+    <result column="cause" property="cause" jdbcType="VARCHAR" />
+    <result column="img" property="img" jdbcType="VARCHAR" />
+    <result column="order_detail_id" property="orderDetailId" jdbcType="INTEGER" />
+    <result column="refund_explain" property="refundExplain" jdbcType="VARCHAR" />
+    <result column="refund_no" property="refundNo" jdbcType="VARCHAR" />
+    <result column="refund_type" property="refundType" jdbcType="VARCHAR" />
+    <result column="repulse_cause" property="repulseCause" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="waybill_company" property="waybillCompany" jdbcType="VARCHAR" />
+    <result column="waybill_no" property="waybillNo" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, create_time, delete_status, update_time, amount, cause, img, order_detail_id, 
+    refund_explain, refund_no, refund_type, repulse_cause, status, waybill_company, waybill_no
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from eshop_refund_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from eshop_refund_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hoperun.shuma.bean.Refund" >
+    insert into eshop_refund_${tablePrefix} (id, create_time, delete_status, 
+      update_time, amount, cause, 
+      img, order_detail_id, refund_explain, 
+      refund_no, refund_type, repulse_cause, 
+      status, waybill_company, waybill_no
+      )
+    values (#{id,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{deleteStatus,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{amount,jdbcType=DOUBLE}, #{cause,jdbcType=VARCHAR}, 
+      #{img,jdbcType=VARCHAR}, #{orderDetailId,jdbcType=INTEGER}, #{refundExplain,jdbcType=VARCHAR}, 
+      #{refundNo,jdbcType=VARCHAR}, #{refundType,jdbcType=VARCHAR}, #{repulseCause,jdbcType=VARCHAR}, 
+      #{status,jdbcType=VARCHAR}, #{waybillCompany,jdbcType=VARCHAR}, #{waybillNo,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.hoperun.shuma.bean.Refund" >
+    insert into eshop_refund_${tablePrefix}
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="deleteStatus != null" >
+        delete_status,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="amount != null" >
+        amount,
+      </if>
+      <if test="cause != null" >
+        cause,
+      </if>
+      <if test="img != null" >
+        img,
+      </if>
+      <if test="orderDetailId != null" >
+        order_detail_id,
+      </if>
+      <if test="refundExplain != null" >
+        refund_explain,
+      </if>
+      <if test="refundNo != null" >
+        refund_no,
+      </if>
+      <if test="refundType != null" >
+        refund_type,
+      </if>
+      <if test="repulseCause != null" >
+        repulse_cause,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="waybillCompany != null" >
+        waybill_company,
+      </if>
+      <if test="waybillNo != null" >
+        waybill_no,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteStatus != null" >
+        #{deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="amount != null" >
+        #{amount,jdbcType=DOUBLE},
+      </if>
+      <if test="cause != null" >
+        #{cause,jdbcType=VARCHAR},
+      </if>
+      <if test="img != null" >
+        #{img,jdbcType=VARCHAR},
+      </if>
+      <if test="orderDetailId != null" >
+        #{orderDetailId,jdbcType=INTEGER},
+      </if>
+      <if test="refundExplain != null" >
+        #{refundExplain,jdbcType=VARCHAR},
+      </if>
+      <if test="refundNo != null" >
+        #{refundNo,jdbcType=VARCHAR},
+      </if>
+      <if test="refundType != null" >
+        #{refundType,jdbcType=VARCHAR},
+      </if>
+      <if test="repulseCause != null" >
+        #{repulseCause,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="waybillCompany != null" >
+        #{waybillCompany,jdbcType=VARCHAR},
+      </if>
+      <if test="waybillNo != null" >
+        #{waybillNo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hoperun.shuma.bean.Refund" >
+    update eshop_refund_${tablePrefix}
+    <set >
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteStatus != null" >
+        delete_status = #{deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="amount != null" >
+        amount = #{amount,jdbcType=DOUBLE},
+      </if>
+      <if test="cause != null" >
+        cause = #{cause,jdbcType=VARCHAR},
+      </if>
+      <if test="img != null" >
+        img = #{img,jdbcType=VARCHAR},
+      </if>
+      <if test="orderDetailId != null" >
+        order_detail_id = #{orderDetailId,jdbcType=INTEGER},
+      </if>
+      <if test="refundExplain != null" >
+        refund_explain = #{refundExplain,jdbcType=VARCHAR},
+      </if>
+      <if test="refundNo != null" >
+        refund_no = #{refundNo,jdbcType=VARCHAR},
+      </if>
+      <if test="refundType != null" >
+        refund_type = #{refundType,jdbcType=VARCHAR},
+      </if>
+      <if test="repulseCause != null" >
+        repulse_cause = #{repulseCause,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="waybillCompany != null" >
+        waybill_company = #{waybillCompany,jdbcType=VARCHAR},
+      </if>
+      <if test="waybillNo != null" >
+        waybill_no = #{waybillNo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hoperun.shuma.bean.Refund" >
+    update eshop_refund_${tablePrefix}
+    set create_time = #{createTime,jdbcType=TIMESTAMP},
+      delete_status = #{deleteStatus,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      amount = #{amount,jdbcType=DOUBLE},
+      cause = #{cause,jdbcType=VARCHAR},
+      img = #{img,jdbcType=VARCHAR},
+      order_detail_id = #{orderDetailId,jdbcType=INTEGER},
+      refund_explain = #{refundExplain,jdbcType=VARCHAR},
+      refund_no = #{refundNo,jdbcType=VARCHAR},
+      refund_type = #{refundType,jdbcType=VARCHAR},
+      repulse_cause = #{repulseCause,jdbcType=VARCHAR},
+      status = #{status,jdbcType=VARCHAR},
+      waybill_company = #{waybillCompany,jdbcType=VARCHAR},
+      waybill_no = #{waybillNo,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

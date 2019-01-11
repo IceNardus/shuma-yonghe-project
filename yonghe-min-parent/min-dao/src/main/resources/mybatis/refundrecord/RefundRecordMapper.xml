@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoperun.shuma.module.mapper.RefundRecordMapper" >
+  <resultMap id="BaseResultMap" type="com.hoperun.shuma.bean.RefundRecord" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="delete_status" property="deleteStatus" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="is_sell" property="isSell" jdbcType="INTEGER" />
+    <result column="record_info" property="recordInfo" jdbcType="VARCHAR" />
+    <result column="refund_id" property="refundId" jdbcType="INTEGER" />
+    <result column="refund_status" property="refundStatus" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, create_time, delete_status, update_time, is_sell, record_info, refund_id, refund_status
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from eshop_refund_record_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from eshop_refund_record_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hoperun.shuma.bean.RefundRecord" >
+    insert into eshop_refund_record_${tablePrefix} (id, create_time, delete_status, 
+      update_time, is_sell, record_info, 
+      refund_id, refund_status)
+    values (#{id,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{deleteStatus,jdbcType=VARCHAR}, 
+      #{updateTime,jdbcType=TIMESTAMP}, #{isSell,jdbcType=INTEGER}, #{recordInfo,jdbcType=VARCHAR}, 
+      #{refundId,jdbcType=INTEGER}, #{refundStatus,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hoperun.shuma.bean.RefundRecord" >
+    insert into eshop_refund_record_${tablePrefix}
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="deleteStatus != null" >
+        delete_status,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="isSell != null" >
+        is_sell,
+      </if>
+      <if test="recordInfo != null" >
+        record_info,
+      </if>
+      <if test="refundId != null" >
+        refund_id,
+      </if>
+      <if test="refundStatus != null" >
+        refund_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteStatus != null" >
+        #{deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isSell != null" >
+        #{isSell,jdbcType=INTEGER},
+      </if>
+      <if test="recordInfo != null" >
+        #{recordInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="refundId != null" >
+        #{refundId,jdbcType=INTEGER},
+      </if>
+      <if test="refundStatus != null" >
+        #{refundStatus,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hoperun.shuma.bean.RefundRecord" >
+    update eshop_refund_record_${tablePrefix}
+    <set >
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleteStatus != null" >
+        delete_status = #{deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isSell != null" >
+        is_sell = #{isSell,jdbcType=INTEGER},
+      </if>
+      <if test="recordInfo != null" >
+        record_info = #{recordInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="refundId != null" >
+        refund_id = #{refundId,jdbcType=INTEGER},
+      </if>
+      <if test="refundStatus != null" >
+        refund_status = #{refundStatus,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hoperun.shuma.bean.RefundRecord" >
+    update eshop_refund_record_${tablePrefix}
+    set create_time = #{createTime,jdbcType=TIMESTAMP},
+      delete_status = #{deleteStatus,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      is_sell = #{isSell,jdbcType=INTEGER},
+      record_info = #{recordInfo,jdbcType=VARCHAR},
+      refund_id = #{refundId,jdbcType=INTEGER},
+      refund_status = #{refundStatus,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

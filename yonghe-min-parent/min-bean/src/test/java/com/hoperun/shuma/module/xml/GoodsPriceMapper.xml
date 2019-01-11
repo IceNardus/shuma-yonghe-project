@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoperun.shuma.module.mapper.GoodsPriceMapper" >
+  <resultMap id="BaseResultMap" type="com.hoperun.shuma.bean.GoodsPrice" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="count" property="count" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="goods_attributes" property="goodsAttributes" jdbcType="VARCHAR" />
+    <result column="goods_id" property="goodsId" jdbcType="INTEGER" />
+    <result column="pay_types" property="payTypes" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DOUBLE" />
+    <result column="unit" property="unit" jdbcType="VARCHAR" />
+    <result column="goods_num" property="goodsNum" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, count, create_time, goods_attributes, goods_id, pay_types, price, unit, goods_num
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from eshop_goods_price_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from eshop_goods_price_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hoperun.shuma.bean.GoodsPrice" >
+    insert into eshop_goods_price_${tablePrefix} (id, count, create_time, 
+      goods_attributes, goods_id, pay_types, 
+      price, unit, goods_num
+      )
+    values (#{id,jdbcType=INTEGER}, #{count,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{goodsAttributes,jdbcType=VARCHAR}, #{goodsId,jdbcType=INTEGER}, #{payTypes,jdbcType=VARCHAR}, 
+      #{price,jdbcType=DOUBLE}, #{unit,jdbcType=VARCHAR}, #{goodsNum,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.hoperun.shuma.bean.GoodsPrice" >
+    insert into eshop_goods_price_${tablePrefix}
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="count != null" >
+        count,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="goodsAttributes != null" >
+        goods_attributes,
+      </if>
+      <if test="goodsId != null" >
+        goods_id,
+      </if>
+      <if test="payTypes != null" >
+        pay_types,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="unit != null" >
+        unit,
+      </if>
+      <if test="goodsNum != null" >
+        goods_num,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="count != null" >
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="goodsAttributes != null" >
+        #{goodsAttributes,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsId != null" >
+        #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="payTypes != null" >
+        #{payTypes,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="unit != null" >
+        #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsNum != null" >
+        #{goodsNum,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hoperun.shuma.bean.GoodsPrice" >
+    update eshop_goods_price_${tablePrefix}
+    <set >
+      <if test="count != null" >
+        count = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="goodsAttributes != null" >
+        goods_attributes = #{goodsAttributes,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsId != null" >
+        goods_id = #{goodsId,jdbcType=INTEGER},
+      </if>
+      <if test="payTypes != null" >
+        pay_types = #{payTypes,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="unit != null" >
+        unit = #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="goodsNum != null" >
+        goods_num = #{goodsNum,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hoperun.shuma.bean.GoodsPrice" >
+    update eshop_goods_price_${tablePrefix}
+    set count = #{count,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      goods_attributes = #{goodsAttributes,jdbcType=VARCHAR},
+      goods_id = #{goodsId,jdbcType=INTEGER},
+      pay_types = #{payTypes,jdbcType=VARCHAR},
+      price = #{price,jdbcType=DOUBLE},
+      unit = #{unit,jdbcType=VARCHAR},
+      goods_num = #{goodsNum,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

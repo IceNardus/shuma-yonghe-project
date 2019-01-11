@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="min-api" />
+        <module name="min-bean" />
+        <module name="min-common" />
+        <module name="min-dao" />
+        <module name="min-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="min-api" target="1.8" />
+      <module name="min-bean" target="1.8" />
+      <module name="min-common" target="1.8" />
+      <module name="min-dao" target="1.8" />
+      <module name="min-service" target="1.8" />
+      <module name="yonghe-min-parent" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

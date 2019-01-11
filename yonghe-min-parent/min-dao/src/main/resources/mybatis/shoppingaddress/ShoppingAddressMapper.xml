@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoperun.shuma.module.mapper.ShoppingAddressMapper" >
+  <resultMap id="BaseResultMap" type="com.hoperun.shuma.bean.ShoppingAddress" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="delete_status" property="deleteStatus" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="address" property="address" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="is_default" property="isDefault" jdbcType="INTEGER" />
+    <result column="member_id" property="memberId" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, create_time, delete_status, update_time, address, city, is_default, member_id, 
+    name, phone
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from eshop_address_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from eshop_address_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hoperun.shuma.bean.ShoppingAddress" useGeneratedKeys="true" keyProperty="T.id">
+    insert into eshop_address_${tablePrefix} (id, create_time, delete_status,
+      update_time, address, city, 
+      is_default, member_id, name, 
+      phone)
+    values (#{T.id,jdbcType=INTEGER}, #{T.createTime,jdbcType=TIMESTAMP}, #{T.deleteStatus,jdbcType=VARCHAR}, 
+      #{T.updateTime,jdbcType=TIMESTAMP}, #{T.address,jdbcType=VARCHAR}, #{T.city,jdbcType=VARCHAR}, 
+      #{T.isDefault,jdbcType=INTEGER}, #{T.memberId,jdbcType=INTEGER}, #{T.name,jdbcType=VARCHAR}, 
+      #{T.phone,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hoperun.shuma.bean.ShoppingAddress" useGeneratedKeys="true" keyProperty="T.id">
+    insert into eshop_address_${tablePrefix}
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="T.id != null" >
+        id,
+      </if>
+      <if test="T.createTime != null" >
+        create_time,
+      </if>
+      <if test="T.deleteStatus != null" >
+        delete_status,
+      </if>
+      <if test="T.updateTime != null" >
+        update_time,
+      </if>
+      <if test="T.address != null" >
+        address,
+      </if>
+      <if test="T.city != null" >
+        city,
+      </if>
+      <if test="T.isDefault != null" >
+        is_default,
+      </if>
+      <if test="T.memberId != null" >
+        member_id,
+      </if>
+      <if test="T.name != null" >
+        name,
+      </if>
+      <if test="T.phone != null" >
+        phone,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="T.id != null" >
+        #{T.id,jdbcType=INTEGER},
+      </if>
+      <if test="T.createTime != null" >
+        #{T.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.deleteStatus != null" >
+        #{T.deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="T.updateTime != null" >
+        #{T.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.address != null" >
+        #{T.address,jdbcType=VARCHAR},
+      </if>
+      <if test="T.city != null" >
+        #{T.city,jdbcType=VARCHAR},
+      </if>
+      <if test="T.isDefault != null" >
+        #{T.isDefault,jdbcType=INTEGER},
+      </if>
+      <if test="T.memberId != null" >
+        #{T.memberId,jdbcType=INTEGER},
+      </if>
+      <if test="T.name != null" >
+        #{T.name,jdbcType=VARCHAR},
+      </if>
+      <if test="T.phone != null" >
+        #{T.phone,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hoperun.shuma.bean.ShoppingAddress" >
+    update eshop_address_${tablePrefix}
+    <set >
+      <if test="T.createTime != null" >
+        create_time = #{T.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.deleteStatus != null" >
+        delete_status = #{T.deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="T.updateTime != null" >
+        update_time = #{T.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.address != null" >
+        address = #{T.address,jdbcType=VARCHAR},
+      </if>
+      <if test="T.city != null" >
+        city = #{T.city,jdbcType=VARCHAR},
+      </if>
+      <if test="T.isDefault != null" >
+        is_default = #{T.isDefault,jdbcType=INTEGER},
+      </if>
+      <if test="T.memberId != null" >
+        member_id = #{T.memberId,jdbcType=INTEGER},
+      </if>
+      <if test="T.name != null" >
+        name = #{T.name,jdbcType=VARCHAR},
+      </if>
+      <if test="T.phone != null" >
+        phone = #{T.phone,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{T.id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hoperun.shuma.bean.ShoppingAddress" >
+    update eshop_address_${tablePrefix}
+    set create_time = #{T.createTime,jdbcType=TIMESTAMP},
+      delete_status = #{T.deleteStatus,jdbcType=VARCHAR},
+      update_time = #{T.updateTime,jdbcType=TIMESTAMP},
+      address = #{T.address,jdbcType=VARCHAR},
+      city = #{T.city,jdbcType=VARCHAR},
+      is_default = #{T.isDefault,jdbcType=INTEGER},
+      member_id = #{T.memberId,jdbcType=INTEGER},
+      name = #{T.name,jdbcType=VARCHAR},
+      phone = #{T.phone,jdbcType=VARCHAR}
+    where id = #{T.id,jdbcType=INTEGER}
+  </update>
+
+  <select id="selectAddressByMemberId" resultMap="BaseResultMap"  >
+    select
+    <include refid="Base_Column_List" />
+    from eshop_address_${tablePrefix}
+    where  member_id= ${memberId}
+    and delete_status=#{status}
+    order by update_time DESC
+  </select>
+
+  <select id="selectDefAddressByMemberId" resultMap="BaseResultMap"  >
+    select
+    <include refid="Base_Column_List" />
+    from eshop_address_${tablePrefix}
+    where  is_default= 1
+    and member_id= ${memberId}
+    and delete_status=#{status}
+    order by update_time DESC
+  </select>
+</mapper>

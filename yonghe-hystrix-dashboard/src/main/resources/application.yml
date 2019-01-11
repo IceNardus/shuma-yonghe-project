@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: yonghe-hystrix-dashboard
+server:
+  port: 11000

@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: yonghe-gateway
+server:
+  port: 10000
+eureka:
+  client:
+    service-url:
+      client:
+          registerWithEureka: false
+          fetchRegistry: false
+          defaultZone: http://localhost:8761/yonghe/

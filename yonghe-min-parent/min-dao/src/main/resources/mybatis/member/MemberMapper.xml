@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoperun.shuma.module.mapper.MemberMapper" >
+  <resultMap id="BaseResultMap" type="com.hoperun.shuma.bean.Member" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="delete_status" property="deleteStatus" jdbcType="VARCHAR" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="user_id" property="userId" jdbcType="VARCHAR" />
+    <result column="wxopenid" property="wxOpenid" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, create_time, delete_status, update_time, name, user_id, wxopenid
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from eshop_member_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from eshop_member_${tablePrefix}
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.hoperun.shuma.bean.Member" useGeneratedKeys="true" keyProperty="T.id">
+    insert into eshop_member_${tablePrefix} (id, create_time, delete_status, 
+      update_time, name, user_id, 
+      wxopenid)
+    values (#{T.id,jdbcType=INTEGER}, #{T.createTime,jdbcType=TIMESTAMP}, #{T.deleteStatus,jdbcType=VARCHAR}, 
+      #{T.updateTime,jdbcType=TIMESTAMP}, #{T.name,jdbcType=VARCHAR}, #{T.userId,jdbcType=VARCHAR}, 
+      #{T.wxOpenid,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.hoperun.shuma.bean.Member" useGeneratedKeys="true" keyProperty="T.id">
+    insert into eshop_member_${tablePrefix}
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="T.id != null" >
+        id,
+      </if>
+      <if test="T.createTime != null" >
+        create_time,
+      </if>
+      <if test="T.deleteStatus != null" >
+        delete_status,
+      </if>
+      <if test="T.updateTime != null" >
+        update_time,
+      </if>
+      <if test="T.name != null" >
+        name,
+      </if>
+      <if test="T.userId != null" >
+        user_id,
+      </if>
+      <if test="T.wxOpenid != null" >
+        wxopenid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="T.id != null" >
+        #{T.id,jdbcType=INTEGER},
+      </if>
+      <if test="T.createTime != null" >
+        #{T.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.deleteStatus != null" >
+        #{T.deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="T.updateTime != null" >
+        #{T.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.name != null" >
+        #{T.name,jdbcType=VARCHAR},
+      </if>
+      <if test="T.userId != null" >
+        #{T.userId,jdbcType=VARCHAR},
+      </if>
+      <if test="T.wxOpenid != null" >
+        #{T.wxOpenid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.hoperun.shuma.bean.Member" >
+    update eshop_member_${tablePrefix}
+    <set >
+      <if test="T.createTime != null" >
+        create_time = #{T.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.deleteStatus != null" >
+        delete_status = #{T.deleteStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="T.updateTime != null" >
+        update_time = #{T.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="T.name != null" >
+        name = #{T.name,jdbcType=VARCHAR},
+      </if>
+      <if test="T.userId != null" >
+        user_id = #{T.userId,jdbcType=VARCHAR},
+      </if>
+      <if test="T.wxOpenid != null" >
+        wxopenid = #{T.wxOpenid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{T.id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.hoperun.shuma.bean.Member" >
+    update eshop_member_${tablePrefix}
+    set create_time = #{T.createTime,jdbcType=TIMESTAMP},
+      delete_status = #{T.deleteStatus,jdbcType=VARCHAR},
+      update_time = #{T.updateTime,jdbcType=TIMESTAMP},
+      name = #{T.name,jdbcType=VARCHAR},
+      user_id = #{T.userId,jdbcType=VARCHAR},
+      wxopenid = #{T.wxOpenid,jdbcType=VARCHAR}
+    where id = #{T.id,jdbcType=INTEGER}
+  </update>
+
+  <select id="getMemberByOpenId" resultMap="BaseResultMap"  >
+    select
+    <include refid="Base_Column_List" />
+    from eshop_member_${tablePrefix}
+    where
+    wxopenid= #{id}
+  </select>
+
+  <select id="getMemberByUserId" resultMap="BaseResultMap"  >
+    select
+    <include refid="Base_Column_List" />
+    from eshop_member_${tablePrefix}
+    where
+    user_id = #{id}
+  </select>
+</mapper>

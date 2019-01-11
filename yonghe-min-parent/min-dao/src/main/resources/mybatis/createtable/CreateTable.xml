@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hoperun.shuma.module.mapper.CreateTableMapper">
+
+    <select id="showTable" resultType="String" parameterType="java.lang.String">
+        SHOW TABLES LIKE '${tableName}';
+    </select>
+
+
+
+    <update id="createBrand">
+ CREATE TABLE eshop_brand_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `cover_pic_url` varchar(255) DEFAULT NULL,
+  `intro` varchar(255) DEFAULT NULL,
+  `is_show` bit(1) DEFAULT NULL,
+  `lowest_price` double DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `pic_url` varchar(255) DEFAULT NULL,
+  `sort` int(11) DEFAULT NULL,
+  `freight` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createCart">
+CREATE TABLE eshop_cart_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `count` int(11) DEFAULT NULL,
+  `good_category_id` int(11) DEFAULT NULL,
+  `goods_id` int(11) DEFAULT NULL,
+  `goods_name` varchar(255) DEFAULT NULL,
+  `member_id` int(11) DEFAULT NULL,
+  `pic` varchar(255) DEFAULT NULL,
+  `price` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createCollect">
+CREATE TABLE eshop_collect_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `good_id` int(11) DEFAULT NULL,
+  `member_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createComments">
+CREATE TABLE eshop_comments_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `img_url` varchar(255) DEFAULT NULL,
+  `key_id` int(11) DEFAULT NULL,
+  `member_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createCommentsPics">
+CREATE TABLE eshop_comments_pics_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `comments_id` int(11) DEFAULT NULL,
+  `pic` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createCoupon">
+CREATE TABLE eshop_coupon_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `conversion_amount` double DEFAULT NULL,
+  `discount` double DEFAULT NULL,
+  `end_time` datetime DEFAULT NULL,
+  `min_amount` double DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `start_time` datetime DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createFeedBack">
+CREATE TABLE eshop_feedback_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `feedback_type` varchar(255) DEFAULT NULL,
+  `img` varchar(255) DEFAULT NULL,
+  `iphone` varchar(255) DEFAULT NULL,
+  `member_id` int(11) DEFAULT NULL,
+  `suggest` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createFootPrint">
+CREATE TABLE eshop_footprint_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `good_id` int(11) DEFAULT NULL,
+  `member_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createGoodsAttribute">
+CREATE TABLE eshop_goods_attribute_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `attribute_id` int(11) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `goods_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createGoods">
+CREATE TABLE eshop_goods_${tablePrefix} (
+   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `brand_id` int(11) DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
+  `detail` varchar(2000) DEFAULT NULL,
+  `end_time` datetime DEFAULT NULL,
+  `freight_type` varchar(255) DEFAULT NULL,
+  `goods_url` varchar(255) DEFAULT NULL,
+  `integral_offset` bit(1) DEFAULT NULL,
+  `is_flash_sale` bit(1) DEFAULT NULL,
+  `is_recommend` bit(1) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `numbering` varchar(255) DEFAULT NULL,
+  `pic_url` varchar(1000) DEFAULT NULL,
+  `restriction` bit(1) DEFAULT NULL,
+  `restriction_count` int(11) DEFAULT NULL,
+  `sale` bit(1) DEFAULT NULL,
+  `shelf` bit(1) DEFAULT NULL,
+  `show_pic` varchar(255) DEFAULT NULL,
+  `start_time` datetime DEFAULT NULL,
+  `sub` varchar(255) DEFAULT NULL,
+  `use_coupon` bit(1) DEFAULT NULL,
+  `restriction_time` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createGoodsPrice">
+CREATE TABLE eshop_goods_price_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `count` int(11) DEFAULT NULL,
+  `create_time` datetime DEFAULT NULL,
+  `goods_attributes` varchar(255) DEFAULT NULL,
+  `goods_id` int(11) DEFAULT NULL,
+  `pay_types` varchar(255) DEFAULT NULL,
+  `price` varchar(255) DEFAULT NULL,
+  `unit` varchar(255) DEFAULT NULL,
+  `goods_num` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+
+    <update id="createMember">
+CREATE TABLE eshop_member_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `user_id` varchar(255) DEFAULT NULL,
+  `wxopenid` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createOrder">
+CREATE TABLE eshop_order_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `actual_income` double DEFAULT NULL,
+  `coupon_discount` double DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `freight_amount` double DEFAULT NULL,
+  `handlers` varchar(255) DEFAULT NULL,
+  `invoice_no` varchar(255) DEFAULT NULL,
+  `invoice_title` varchar(255) DEFAULT NULL,
+  `invoice_type` varchar(255) DEFAULT NULL,
+  `logistics_no` varchar(255) DEFAULT NULL,
+  `make_invoice_type` varchar(255) DEFAULT NULL,
+  `member_id` int(11) DEFAULT NULL,
+  `open_order_no` varchar(255) DEFAULT NULL,
+  `order_income` double DEFAULT NULL,
+  `order_no` varchar(255) DEFAULT NULL,
+  `order_no` varchar(255) DEFAULT NULL,
+  `order_result` varchar(255) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  `points_discount` double DEFAULT NULL,
+  `receipt_time` datetime DEFAULT NULL,
+  `shipper_id` int(11) DEFAULT NULL,
+  `shopping_address` int(11) DEFAULT NULL,
+  `wx_order_no` varchar(255) DEFAULT NULL,
+  `integrals` int(255) DEFAULT NULL,
+  `coupon_code` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createRefund">
+CREATE TABLE eshop_refund_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `cause` varchar(255) DEFAULT NULL,
+  `img` varchar(255) DEFAULT NULL,
+  `order_detail_id` int(11) DEFAULT NULL,
+  `refund_explain` varchar(255) DEFAULT NULL,
+  `refund_no` varchar(255) DEFAULT NULL,
+  `refund_type` varchar(255) DEFAULT NULL,
+  `repulse_cause` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `waybill_company` varchar(255) DEFAULT NULL,
+  `waybill_no` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createRefundRecord">
+CREATE TABLE eshop_refund_record_${tablePrefix}(
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `is_sell` int(11) DEFAULT NULL,
+  `record_info` varchar(255) DEFAULT NULL,
+  `refund_id` int(11) DEFAULT NULL,
+  `refund_status` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createSearchHistory">
+CREATE TABLE eshop_search_history_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `member_id` int(11) DEFAULT NULL,
+  `value` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createShoppingAddress">
+CREATE TABLE eshop_address_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `is_default` int(11) DEFAULT NULL,
+  `member_id` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createSubOrder">
+CREATE TABLE eshop_sub_order_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `actual_amount` double DEFAULT NULL,
+  `amount` double DEFAULT NULL,
+  `count` int(11) DEFAULT NULL,
+  `goods_attributes` varchar(255) DEFAULT NULL,
+  `goods_id` int(11) DEFAULT NULL,
+  `goods_intro` varchar(255) DEFAULT NULL,
+  `goods_name` varchar(255) DEFAULT NULL,
+  `goods_price` double DEFAULT NULL,
+  `handlers` varchar(255) DEFAULT NULL,
+  `order_id` int(11) DEFAULT NULL,
+  `refund_status` varchar(255) DEFAULT NULL,
+  `show_img` varchar(255) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
+  `integral` int(11) DEFAULT NULL,
+  `integrals` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+    <update id="createTopic">
+CREATE TABLE eshop_topic_${tablePrefix} (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `create_time` datetime DEFAULT NULL,
+  `delete_status` varchar(255) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `content` varchar(255) DEFAULT NULL,
+  `is_recommend` bit(1) DEFAULT NULL,
+  `pic` varchar(255) DEFAULT NULL,
+  `price_info` double DEFAULT NULL,
+  `sub_title` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `top` bit(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    </update>
+
+</mapper>

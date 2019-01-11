@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoperun.shuma.module.mapper.OrderMapper">
+    <resultMap id="OrderCmsResultMap" type="com.hoperun.shuma.dto.OrderCmsDTO">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="delete_status" property="deleteStatus" jdbcType="VARCHAR"/>
+        <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="amount" property="amount" jdbcType="DOUBLE"/>
+        <result column="freight_amount" property="freightAmount" jdbcType="DOUBLE"/>
+        <result column="handlers" property="handlers" jdbcType="VARCHAR"/>
+        <result column="invoice_no" property="invoiceNo" jdbcType="VARCHAR"/>
+        <result column="invoice_title" property="invoiceTitle" jdbcType="VARCHAR"/>
+        <result column="invoice_type" property="invoiceType" jdbcType="VARCHAR"/>
+        <result column="logistics_no" property="logisticsNo" jdbcType="VARCHAR"/>
+        <result column="make_invoice_type" property="makeInvoiceType" jdbcType="VARCHAR"/>
+        <result column="member_id" property="memberId" jdbcType="INTEGER"/>
+        <result column="order_no" property="orderNo" jdbcType="VARCHAR"/>
+        <result column="order_result" property="orderResult" jdbcType="VARCHAR"/>
+        <result column="receipt_time" property="receiptTime" jdbcType="TIMESTAMP"/>
+        <result column="shopping_address" property="shoppingAddress" jdbcType="INTEGER"/>
+        <result column="wx_order_no" property="wxOrderNo" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="mobile" property="mobile" jdbcType="VARCHAR"/>
+        <result column="refund_type" property="refundType" jdbcType="VARCHAR"/>
+    </resultMap>
+
+
+    <sql id="orderColumn">
+        o.id,
+        o.create_time,
+        o.delete_status,
+        o.update_time ,
+        o.amount,
+        o.freight_amount ,
+        o.handlers,
+        o.invoice_no ,
+        o.invoice_title ,
+        o.invoice_type ,
+        o.logistics_no ,
+        o.make_invoice_type ,
+        o.member_id ,
+        o.order_no ,
+        o.order_result ,
+        o.receipt_time ,
+        o.shopping_address ,
+        o.wx_order_no ,
+
+        m.name,
+        m.mobile,
+
+        r.refund_type
+    </sql>
+
+    <sql id="orderJoins">
+        INNER JOIN c_member m ON o.member_id = m.id
+        LEFT JOIN (SELECT a.* FROM c_order_detail a WHERE NOT EXISTS (SELECT 1 FROM c_order_detail b WHERE b.order_id=a.order_id AND b.id>a.id) ) od ON o.id = od.order_id
+        LEFT JOIN (SELECT a.* FROM c_refund a WHERE NOT EXISTS(SELECT 1 FROM c_refund b WHERE b.order_detail_id=a.order_detail_id AND b.id>a.id) )r ON od.id = r.order_detail_id
+    </sql>
+
+    <select id="getListPage" resultMap="OrderCmsResultMap">
+        SELECT
+        <include refid="orderColumn"></include>
+        FROM c_order o
+        <include refid="orderJoins"></include>
+        <where>
+            <if test="historyTime != null">
+                <![CDATA[ o.create_time < #{historyTime} ]]>
+            </if>
+            <if test="status != null and status != ''">
+                AND od.status = #{status}
+            </if>
+            <if test="orderNo != null and orderNo != ''">
+                AND o.order_no = #{orderNo}
+            </if>
+            <if test="invoiceType != null and invoiceType != ''">
+                AND o.invoice_type = #{invoiceType}
+            </if>
+            <if test="startTime != null and endTime != null">
+                AND (o.create_time BETWEEN #{startTime} AND #{endTime})
+            </if>
+            <if test="refundType != null and refundType != ''">
+                AND r.refund_type = #{refundType}
+            </if>
+        </where>
+        ORDER BY o.create_time DESC
+        <!--LIMIT #{pages},#{rows}-->
+    </select>
+
+    <select id="getOrderCount" resultType="java.lang.Integer">
+        SELECT COUNT(DISTINCT(r.id))
+        from c_order r left join c_order_detail d on r.id=d.order_id
+        <where>
+            <if test="memberId != null and memberId > 0">
+                AND r.member_id=#{memberId}
+            </if>
+            <if test="status!=null and status !=''">
+                and d.status=#{status} and (d.refund_status is NULL or d.refund_status in ('REJECT','CLOSE'))
+            </if>
+        </where>
+    </select>
+
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hoperun.shuma.module.mapper.SubOrderMapper" >
+
+
+  <select id="selectRestrictionCount">
+    SELECT
+	count(d.count)
+FROM
+	eshop_sub_order_${tablePrefix} d
+WHERE
+	(
+		d.refund_status IS NULL
+		OR d.refund_status IN ('REJECT', 'CLOSE')
+	)
+AND order_id IN (
+	SELECT
+		id
+	FROM
+		eshop_order_boss o
+	WHERE
+		o.member_id = #{memberId}
+)
+AND d.create_time > #{restrictionTime}
+AND d.goods_id = #{goodsId}
+AND (
+	SELECT
+		restriction
+	FROM
+		eshop_goods_${tablePrefix} g
+	WHERE
+		g.id = #{goodsId}
+) = 1
+  </select>
+</mapper>

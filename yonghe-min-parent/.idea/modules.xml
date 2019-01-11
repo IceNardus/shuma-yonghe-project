@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/min-api/min-api.iml" filepath="$PROJECT_DIR$/min-api/min-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/min-bean/min-bean.iml" filepath="$PROJECT_DIR$/min-bean/min-bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/min-common/min-common.iml" filepath="$PROJECT_DIR$/min-common/min-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/min-dao/min-dao.iml" filepath="$PROJECT_DIR$/min-dao/min-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/min-service/min-service.iml" filepath="$PROJECT_DIR$/min-service/min-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yonghe-min-parent.iml" filepath="$PROJECT_DIR$/yonghe-min-parent.iml" />
+    </modules>
+  </component>
+</project>
