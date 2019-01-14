@@ -56,6 +56,7 @@ public class ActivityController {
         if(!"1".equals(request.getActivityNum())){
             nums=request.getActivityNum();
         }
+
         return new ApiMessage();
 
 

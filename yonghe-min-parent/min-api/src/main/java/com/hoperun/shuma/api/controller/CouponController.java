@@ -35,5 +35,7 @@ import java.util.Map;
 @RequestMapping(value = "/min/coupon")
 public class CouponController {
 
-
+    public ApiMessage getCouponList(){
+        return new ApiMessage();
+    }
 }

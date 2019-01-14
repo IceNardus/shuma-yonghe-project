@@ -59,9 +59,21 @@ public class LoginController  {
         return new ApiMessage();
     }
 
+    /**
+     * 添加用户
+     * @param info
+     * @return
+     */
+    @RequestMapping(value="/add", method= RequestMethod.POST)
+    public ApiMessage addUserInfo(@RequestBody MemberInfo info)throws  Exception{
 
+        DataObj obj=wx.getMinUserInfo(info.getCode(),info.getIv(),info.getEncryptedData());
 
+        MinMember minMember=crm.minRegistered(obj.getOpenid(),obj.getMobile(),obj.getUnionid());
 
+        sessionManager.resultResponse(minMember,response);
 
+        return new ApiMessage();
+    }
 
 }

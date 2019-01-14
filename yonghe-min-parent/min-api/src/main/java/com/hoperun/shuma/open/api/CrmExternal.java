@@ -220,7 +220,7 @@ public class CrmExternal {
      * @param minOpenId
      * @return
      */
-    public ApiMessage minRegistered(String minOpenId,String mobile,String uniodId){
+    public MinMember minRegistered(String minOpenId,String mobile,String uniodId){
         String url=BASE_URI+"crm/open/api/member/register";
         Map map=new HashMap();
         map.put("wxMiniOpenid",minOpenId);
@@ -232,27 +232,26 @@ public class CrmExternal {
         map.put("transCode",LOGIN_TRANS_CODE);
 
         map=getSignAndParms(map);
-        ApiMessage message=new ApiMessage();
+        MinMember minMember=new MinMember();
         try {
             String  result=HttpUtil.post(url,map);
             LoginResult loginResult=JSON.parseObject(result,LoginResult.class);
 
-
-            message = checkStatus(loginResult, message);
-            if (!message.isSucceed()) {
-                return message;
+            if (!loginResult.getSuccess()) {
+                throw new ApiException(ApiResponseStatus.MEMBER_ALREADY_EXISTED);
             }
+            //注册信息
             JSONObject jsonObject=loginResult.getData();
-            if(jsonObject!=null&&!jsonObject.isEmpty()&&jsonObject.containsKey("memberNo")){
-                message.setData(jsonObject.getString("memberNo"));
-                return message;
-            }
+            minMember.setCrmNo(jsonObject.getString("memberNo"));
+            minMember.setUnionId(jsonObject.getString("wxUnionid"));
+            minMember.setWxMinOpenId(jsonObject.getString("wxMiniOpenid"));
 
         } catch (UnsupportedEncodingException e) {
             log.error(e.getMessage(),e);
         }
-        return new ApiMessage();
-    }
+        return minMember;
+
+     }
 
     /**
      * 获取用户基本信息

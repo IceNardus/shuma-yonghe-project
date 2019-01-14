@@ -114,7 +114,6 @@ public class WxExternal {
 
         log.info("用户信息为:"+object);
 
-
         return obj;
     }
 
