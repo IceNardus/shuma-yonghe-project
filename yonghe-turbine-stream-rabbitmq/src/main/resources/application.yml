@@ -6,10 +6,31 @@ spring:
      port: 5672
      username: shuma
      password: q1w2e3r4
+  boot:
+     admin:
+        client:
+          url: http://localhost:8081
+          password: admin
+          username: 123123
+          instance:
+              prefer-ip: true
+              service-base-url: http://localhost:8081
 eureka:
+  instance:
+      leaseRenewalIntervalInSeconds: 10
+      health-check-url-path: /actuator/health
   client:
     service-url:
       client:
           registerWithEureka: false
           fetchRegistry: false
-          defaultZone: http://localhost:8761/yonghe/
+          defaultZone: http://admin:123456@localhost:8761/yonghe/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+        show-details: ALWAYS

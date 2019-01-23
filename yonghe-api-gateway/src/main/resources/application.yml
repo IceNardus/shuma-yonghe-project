@@ -1,12 +1,37 @@
 spring:
   application:
     name: yonghe-gateway
+  boot:
+      admin:
+        client:
+          url: "http://localhost:8081"
+          password: admin
+          username: 123456
+          instance:
+            prefer-ip: true
 server:
   port: 10000
 eureka:
+  instance:
+          leaseRenewalIntervalInSeconds: 10
+          health-check-url-path: /actuator/health
   client:
     service-url:
       client:
           registerWithEureka: false
           fetchRegistry: false
           defaultZone: http://localhost:8761/yonghe/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+info:
+  version: @project.version@
+logging:
+  path: E:\log\logs\gateway

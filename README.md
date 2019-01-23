@@ -20,10 +20,11 @@
   6. Hystrix 监控数据聚合(Turbine-stream)
   7. Hystrix 监控面板(Hystrix-dashboard)
   8. 分布式服务跟踪(Ziplin和Sleuth)
+  9. SpringAdmin 监控(SpringAdmin)
   
   
   启动顺序:  
-    注册中心 -> 配置中心 -> Hystrix 监控数据聚合 -> 微服务 -> 负载均衡和熔断器 -> 网关和过滤器 ->Hystrix 监控面板 ->分布式服务跟踪(Ziplin和Sleuth)
+    注册中心 -> 配置中心 -> SpringAdmin 监控-> Hystrix 监控数据聚合 ->分布式服务跟踪(Ziplin和Sleuth)-> 微服务 -> 负载均衡和熔断器 -> 网关和过滤器 ->Hystrix 监控面板 
   
   注意：  
       在最新版本的 Spring Cloud 2.0依赖管理里已经找不到zipkin-server,我们只能根据启动官方提供的架包启动。  

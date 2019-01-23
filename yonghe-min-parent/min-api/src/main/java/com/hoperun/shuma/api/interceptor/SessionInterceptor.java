@@ -30,7 +30,7 @@ public class SessionInterceptor extends HandlerInterceptorAdapter {
 		}
 		String requestURI = request.getRequestURI();
 		String userToken = request.getHeader("User-Token");
-		if (requestURI.indexOf("/login")<0){
+		if (requestURI.indexOf("/login")<0&&requestURI.indexOf("/actuator")<0&&requestURI.indexOf("/error")<0){
 			if (StringUtil.isNotEmpty(userToken)) {
 				MinMember member = manager.getSession(userToken);
 				if(member!=null){
@@ -41,7 +41,7 @@ public class SessionInterceptor extends HandlerInterceptorAdapter {
 				}
 			} else {
 				log.info("User-Token is null, Request Url = {}", request.getRequestURL());
-				throw new ApiException(ApiResponseStatus.NO_USER_LOGIN);
+  				throw new ApiException(ApiResponseStatus.NO_USER_LOGIN);
 			}
 		}
 

@@ -1,4 +1,8 @@
 spring:
+  security:
+        user:
+          name: 'admin'
+          password: 'admin'
   profiles:
      active: dev
   cloud:
@@ -15,5 +19,7 @@ eureka:
       client:
           registerWithEureka: false
           fetchRegistry: false
-          defaultZone: http://localhost:8761/yonghe/
-
+          defaultZone: http://admin:123456@localhost:8761/yonghe/
+  instance:
+       leaseRenewalIntervalInSeconds: 10
+       health-check-url-path: /actuator/health

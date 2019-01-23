@@ -1,5 +1,7 @@
 package com.hoperun.shuma.service;
 
+import com.hoperun.shuma.common.base.ApiMessage;
+
 /**
  * Created with IntelliJ IDEA
  * Created By IceSnow
@@ -7,4 +9,5 @@ package com.hoperun.shuma.service;
  * Time: 9:53 AM
  */
 public interface IMinGroupActivityPrizeService {
+
 }

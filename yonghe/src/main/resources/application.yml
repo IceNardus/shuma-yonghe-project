@@ -1,6 +1,10 @@
 spring:
   application:
     name: yonghe
+  security: #设置security登录账号密码
+      user:
+        name: admin
+        password: 123456
 server:
   port: 8761
 eureka:
@@ -10,4 +14,4 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/yonghe/
+      defaultZone: http://admin:123456@${eureka.instance.hostname}:${server.port}/yonghe/

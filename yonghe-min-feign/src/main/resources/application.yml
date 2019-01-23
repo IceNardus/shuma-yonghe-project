@@ -14,7 +14,19 @@ spring:
           probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
   zipkin:
         base-url: http://localhost:9411/ # 指定了 Zipkin 服务器的地址
+  boot:
+     admin:
+        client:
+          url: http://localhost:8081
+          password: admin
+          username: 123123
+          instance:
+              prefer-ip: true
+              service-base-url: http://localhost:8081
 eureka:
+  instance:
+      leaseRenewalIntervalInSeconds: 10
+      health-check-url-path: /actuator/health
   client:
     service-url:
       client:
@@ -30,4 +42,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include: "*"
+  endpoint:
+    health:
+        show-details: ALWAYS
