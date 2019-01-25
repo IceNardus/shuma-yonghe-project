@@ -23,12 +23,18 @@ spring:
               instance:
                   prefer-ip: true
                   service-base-url: http://localhost:8081
-log: #Log
-  path: /opt/log/shuma/
-  appname: open/min/api/
-  level: INFO
+info:
+  version: @project.version@
+
+logging:
+  path: E:\log\logs\min
+  file: min-api.log
+  level:
+    root: INFO
+
+
 server:
-    port: 8083
+    port: 8084
 management:
   endpoints:
     web:

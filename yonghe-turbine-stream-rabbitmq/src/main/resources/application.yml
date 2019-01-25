@@ -34,3 +34,12 @@ management:
   endpoint:
     health:
         show-details: ALWAYS
+
+info:
+  version: @project.version@
+
+logging:
+  path: E:\log\logs\turbine-stream-rabbitmq
+  file: turbine-stream-rabbitmq-info.log
+  level:
+    root: INFO
