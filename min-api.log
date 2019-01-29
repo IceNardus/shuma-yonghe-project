@@ -210,3 +210,6 @@
 2019-01-29 17:27:16.387  INFO [-,,,] 5752 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-01-29 17:27:29.714  INFO [-,8973cc2c253d7055,8973cc2c253d7055,false] 5752 --- [http-nio-8084-exec-7] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:12000/
 2019-01-29 17:27:35.236  INFO [-,8973cc2c253d7055,8973cc2c253d7055,false] 5752 --- [http-nio-8084-exec-7] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=min, profiles=[dev], label=master, version=ff18d6939a4afa951ab23917ba1ad8fd561f7278, state=null
+2019-01-29 17:32:16.394  INFO [-,,,] 5752 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-01-29 17:32:29.725  INFO [-,675116ee39d70b1a,675116ee39d70b1a,false] 5752 --- [http-nio-8084-exec-1] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:12000/
+2019-01-29 17:32:35.745  INFO [-,675116ee39d70b1a,675116ee39d70b1a,false] 5752 --- [http-nio-8084-exec-1] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=min, profiles=[dev], label=master, version=ff18d6939a4afa951ab23917ba1ad8fd561f7278, state=null
