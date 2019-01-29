@@ -1,0 +1,332 @@
+2019-01-29 16:26:57.245 - INFO 12176 [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6ab778a: startup date [Tue Jan 29 16:26:57 CST 2019]; root of context hierarchy
+2019-01-29 16:26:57.545 - INFO 12176 [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-29 16:26:57.599 - INFO 12176 [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$f22fdd11] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-29 16:46:30.514 - INFO 13616 [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@306e95ec: startup date [Tue Jan 29 16:46:30 CST 2019]; root of context hierarchy
+2019-01-29 16:46:31.010 - INFO 13616 [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-29 16:46:31.062 - INFO 13616 [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$76ce1671] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-29 16:46:32.488 - INFO 13616 [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-01-29 16:46:32.561 - INFO 13616 [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-01-29 16:46:32.683 - INFO 13616 [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-29 16:46:32.992 - INFO 13616 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-01-29 16:46:32.993 - INFO 13616 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-01-29 16:46:33.201 - INFO 13616 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-01-29 16:46:33.202 - INFO 13616 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-01-29 16:46:33.234 - INFO 13616 [           main] c.sun.jersey.spi.service.ServiceFinder   : Running in a non-OSGi environment
+2019-01-29 16:46:33.243 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface com.sun.jersey.client.proxy.ViewProxyProvider
+2019-01-29 16:46:33.251 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface com.sun.jersey.spi.inject.InjectableProvider
+2019-01-29 16:46:33.258 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.SAXParserContextProvider
+2019-01-29 16:46:33.259 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.XMLStreamReaderContextProvider
+2019-01-29 16:46:33.259 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.DocumentBuilderFactoryProvider
+2019-01-29 16:46:33.259 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.TransformerFactoryProvider
+2019-01-29 16:46:33.359 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyReader
+2019-01-29 16:46:33.384 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider
+2019-01-29 16:46:33.385 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider
+2019-01-29 16:46:33.385 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider
+2019-01-29 16:46:33.385 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider
+2019-01-29 16:46:33.385 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider
+2019-01-29 16:46:33.386 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider
+2019-01-29 16:46:33.386 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider
+2019-01-29 16:46:33.386 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider
+2019-01-29 16:46:33.386 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider
+2019-01-29 16:46:33.386 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App
+2019-01-29 16:46:33.387 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text
+2019-01-29 16:46:33.387 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General
+2019-01-29 16:46:33.387 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App
+2019-01-29 16:46:33.387 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text
+2019-01-29 16:46:33.387 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General
+2019-01-29 16:46:33.388 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App
+2019-01-29 16:46:33.388 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text
+2019-01-29 16:46:33.389 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General
+2019-01-29 16:46:33.389 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider
+2019-01-29 16:46:33.389 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider
+2019-01-29 16:46:33.389 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader
+2019-01-29 16:46:33.390 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader
+2019-01-29 16:46:33.390 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader
+2019-01-29 16:46:33.390 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App
+2019-01-29 16:46:33.390 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text
+2019-01-29 16:46:33.390 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General
+2019-01-29 16:46:33.391 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.EntityHolderReader
+2019-01-29 16:46:33.421 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderFactory    : A dependent class, javax/mail/internet/MimeMultipart, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored.
+2019-01-29 16:46:33.553 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyWriter
+2019-01-29 16:46:33.555 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider
+2019-01-29 16:46:33.555 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider
+2019-01-29 16:46:33.556 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider
+2019-01-29 16:46:33.556 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider
+2019-01-29 16:46:33.556 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider
+2019-01-29 16:46:33.556 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider
+2019-01-29 16:46:33.556 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider
+2019-01-29 16:46:33.556 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider
+2019-01-29 16:46:33.556 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider
+2019-01-29 16:46:33.557 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App
+2019-01-29 16:46:33.558 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text
+2019-01-29 16:46:33.558 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General
+2019-01-29 16:46:33.558 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App
+2019-01-29 16:46:33.558 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text
+2019-01-29 16:46:33.558 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General
+2019-01-29 16:46:33.558 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App
+2019-01-29 16:46:33.558 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text
+2019-01-29 16:46:33.559 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General
+2019-01-29 16:46:33.559 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider
+2019-01-29 16:46:33.559 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider
+2019-01-29 16:46:33.559 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.StreamingOutputProvider
+2019-01-29 16:46:33.559 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter
+2019-01-29 16:46:33.560 - INFO 13616 [           main] c.s.j.c.spi.component.ProviderFactory    : A dependent class, javax/mail/internet/MimeMultipart, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored.
+2019-01-29 16:46:33.631 - INFO 13616 [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-01-29 16:46:33.845 - INFO 13616 [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-01-29 16:46:33.845 - INFO 13616 [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-01-29 16:46:33.846 - INFO 13616 [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-01-29 16:46:33.846 - INFO 13616 [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-01-29 16:46:33.846 - INFO 13616 [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-01-29 16:46:33.846 - INFO 13616 [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-01-29 16:46:33.846 - INFO 13616 [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-01-29 16:46:34.347 - INFO 13616 [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-01-29 16:46:34.352 - INFO 13616 [           main] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
+2019-01-29 16:46:34.363 - INFO 13616 [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548751594357 with initial instances count: 1
+2019-01-29 16:46:43.936 - INFO 12776 [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6a6afff2: startup date [Tue Jan 29 16:46:43 CST 2019]; root of context hierarchy
+2019-01-29 16:46:44.293 - INFO 12776 [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-29 16:46:44.360 - INFO 12776 [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$eb5b146e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-29 16:47:23.201 - INFO 15292 [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@58695725: startup date [Tue Jan 29 16:47:23 CST 2019]; root of context hierarchy
+2019-01-29 16:47:23.864 - INFO 15292 [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-29 16:47:23.921 - INFO 15292 [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8fb0fd23] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-29 16:47:25.569 - INFO 15292 [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-01-29 16:47:25.674 - INFO 15292 [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-01-29 16:47:25.760 - INFO 15292 [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-29 16:47:26.032 - INFO 15292 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-01-29 16:47:26.032 - INFO 15292 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-01-29 16:47:26.223 - INFO 15292 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-01-29 16:47:26.223 - INFO 15292 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-01-29 16:47:26.246 - INFO 15292 [           main] c.sun.jersey.spi.service.ServiceFinder   : Running in a non-OSGi environment
+2019-01-29 16:47:26.253 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface com.sun.jersey.client.proxy.ViewProxyProvider
+2019-01-29 16:47:26.259 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface com.sun.jersey.spi.inject.InjectableProvider
+2019-01-29 16:47:26.264 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.SAXParserContextProvider
+2019-01-29 16:47:26.266 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.XMLStreamReaderContextProvider
+2019-01-29 16:47:26.268 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.DocumentBuilderFactoryProvider
+2019-01-29 16:47:26.268 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.TransformerFactoryProvider
+2019-01-29 16:47:26.352 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyReader
+2019-01-29 16:47:26.370 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider
+2019-01-29 16:47:26.371 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider
+2019-01-29 16:47:26.371 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider
+2019-01-29 16:47:26.371 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider
+2019-01-29 16:47:26.371 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider
+2019-01-29 16:47:26.371 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider
+2019-01-29 16:47:26.372 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider
+2019-01-29 16:47:26.372 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider
+2019-01-29 16:47:26.373 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider
+2019-01-29 16:47:26.373 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App
+2019-01-29 16:47:26.373 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text
+2019-01-29 16:47:26.373 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General
+2019-01-29 16:47:26.374 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App
+2019-01-29 16:47:26.374 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text
+2019-01-29 16:47:26.374 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General
+2019-01-29 16:47:26.375 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App
+2019-01-29 16:47:26.375 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text
+2019-01-29 16:47:26.376 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General
+2019-01-29 16:47:26.377 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider
+2019-01-29 16:47:26.378 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider
+2019-01-29 16:47:26.380 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader
+2019-01-29 16:47:26.381 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader
+2019-01-29 16:47:26.381 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader
+2019-01-29 16:47:26.381 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App
+2019-01-29 16:47:26.381 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text
+2019-01-29 16:47:26.381 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General
+2019-01-29 16:47:26.382 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.EntityHolderReader
+2019-01-29 16:47:26.406 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderFactory    : A dependent class, javax/mail/internet/MimeMultipart, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored.
+2019-01-29 16:47:26.492 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyWriter
+2019-01-29 16:47:26.495 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider
+2019-01-29 16:47:26.495 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider
+2019-01-29 16:47:26.495 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider
+2019-01-29 16:47:26.495 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider
+2019-01-29 16:47:26.496 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider
+2019-01-29 16:47:26.497 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider
+2019-01-29 16:47:26.497 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider
+2019-01-29 16:47:26.497 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider
+2019-01-29 16:47:26.497 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider
+2019-01-29 16:47:26.497 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App
+2019-01-29 16:47:26.498 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text
+2019-01-29 16:47:26.499 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General
+2019-01-29 16:47:26.499 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App
+2019-01-29 16:47:26.499 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text
+2019-01-29 16:47:26.499 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General
+2019-01-29 16:47:26.499 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App
+2019-01-29 16:47:26.499 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text
+2019-01-29 16:47:26.499 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General
+2019-01-29 16:47:26.500 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider
+2019-01-29 16:47:26.500 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider
+2019-01-29 16:47:26.500 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.StreamingOutputProvider
+2019-01-29 16:47:26.500 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter
+2019-01-29 16:47:26.501 - INFO 15292 [           main] c.s.j.c.spi.component.ProviderFactory    : A dependent class, javax/mail/internet/MimeMultipart, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored.
+2019-01-29 16:47:26.577 - INFO 15292 [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-01-29 16:47:27.732 - INFO 15292 [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-01-29 16:47:27.732 - INFO 15292 [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-01-29 16:47:27.733 - INFO 15292 [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-01-29 16:47:27.733 - INFO 15292 [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-01-29 16:47:27.733 - INFO 15292 [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-01-29 16:47:27.733 - INFO 15292 [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-01-29 16:47:27.733 - INFO 15292 [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-01-29 16:47:28.593 - INFO 15292 [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-01-29 16:47:28.600 - INFO 15292 [           main] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
+2019-01-29 16:47:28.607 - INFO 15292 [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548751648605 with initial instances count: 2
+2019-01-29 16:48:17.945 - INFO 15724 [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1de5f259: startup date [Tue Jan 29 16:48:17 CST 2019]; root of context hierarchy
+2019-01-29 16:48:18.531 - INFO 15724 [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-29 16:48:18.590 - INFO 15724 [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8dace345] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-29 16:48:20.053 - INFO 15724 [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-01-29 16:48:20.128 - INFO 15724 [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-01-29 16:48:20.208 - INFO 15724 [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-29 16:48:20.434 - INFO 15724 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-01-29 16:48:20.434 - INFO 15724 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-01-29 16:48:20.590 - INFO 15724 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-01-29 16:48:20.590 - INFO 15724 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-01-29 16:48:20.617 - INFO 15724 [           main] c.sun.jersey.spi.service.ServiceFinder   : Running in a non-OSGi environment
+2019-01-29 16:48:20.624 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface com.sun.jersey.client.proxy.ViewProxyProvider
+2019-01-29 16:48:20.628 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface com.sun.jersey.spi.inject.InjectableProvider
+2019-01-29 16:48:20.634 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.SAXParserContextProvider
+2019-01-29 16:48:20.635 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.XMLStreamReaderContextProvider
+2019-01-29 16:48:20.635 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.DocumentBuilderFactoryProvider
+2019-01-29 16:48:20.635 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.TransformerFactoryProvider
+2019-01-29 16:48:20.729 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyReader
+2019-01-29 16:48:20.755 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider
+2019-01-29 16:48:20.765 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider
+2019-01-29 16:48:20.765 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider
+2019-01-29 16:48:20.765 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider
+2019-01-29 16:48:20.765 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider
+2019-01-29 16:48:20.766 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider
+2019-01-29 16:48:20.766 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider
+2019-01-29 16:48:20.766 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider
+2019-01-29 16:48:20.767 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider
+2019-01-29 16:48:20.767 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App
+2019-01-29 16:48:20.767 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text
+2019-01-29 16:48:20.768 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General
+2019-01-29 16:48:20.768 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App
+2019-01-29 16:48:20.768 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text
+2019-01-29 16:48:20.769 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General
+2019-01-29 16:48:20.770 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App
+2019-01-29 16:48:20.770 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text
+2019-01-29 16:48:20.770 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General
+2019-01-29 16:48:20.771 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider
+2019-01-29 16:48:20.771 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider
+2019-01-29 16:48:20.771 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader
+2019-01-29 16:48:20.771 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader
+2019-01-29 16:48:20.772 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader
+2019-01-29 16:48:20.772 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App
+2019-01-29 16:48:20.772 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text
+2019-01-29 16:48:20.773 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General
+2019-01-29 16:48:20.773 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.EntityHolderReader
+2019-01-29 16:48:20.804 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderFactory    : A dependent class, javax/mail/internet/MimeMultipart, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored.
+2019-01-29 16:48:20.893 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyWriter
+2019-01-29 16:48:20.895 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider
+2019-01-29 16:48:20.896 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider
+2019-01-29 16:48:20.896 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider
+2019-01-29 16:48:20.896 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider
+2019-01-29 16:48:20.896 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider
+2019-01-29 16:48:20.896 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider
+2019-01-29 16:48:20.898 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider
+2019-01-29 16:48:20.898 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider
+2019-01-29 16:48:20.898 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider
+2019-01-29 16:48:20.898 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App
+2019-01-29 16:48:20.899 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text
+2019-01-29 16:48:20.899 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General
+2019-01-29 16:48:20.900 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App
+2019-01-29 16:48:20.900 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text
+2019-01-29 16:48:20.900 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General
+2019-01-29 16:48:20.900 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App
+2019-01-29 16:48:20.900 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text
+2019-01-29 16:48:20.900 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General
+2019-01-29 16:48:20.901 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider
+2019-01-29 16:48:20.901 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider
+2019-01-29 16:48:20.901 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.StreamingOutputProvider
+2019-01-29 16:48:20.901 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter
+2019-01-29 16:48:20.902 - INFO 15724 [           main] c.s.j.c.spi.component.ProviderFactory    : A dependent class, javax/mail/internet/MimeMultipart, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored.
+2019-01-29 16:48:20.966 - INFO 15724 [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-01-29 16:48:21.134 - INFO 15724 [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-01-29 16:48:21.134 - INFO 15724 [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-01-29 16:48:21.134 - INFO 15724 [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-01-29 16:48:21.135 - INFO 15724 [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-01-29 16:48:21.135 - INFO 15724 [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-01-29 16:48:21.135 - INFO 15724 [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-01-29 16:48:21.135 - INFO 15724 [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-01-29 16:48:21.411 - INFO 15724 [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-01-29 16:48:21.416 - INFO 15724 [           main] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
+2019-01-29 16:48:21.422 - INFO 15724 [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548751701420 with initial instances count: 3
+2019-01-29 16:51:32.640 - INFO 5752 [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@17f62e33: startup date [Tue Jan 29 16:51:32 CST 2019]; root of context hierarchy
+2019-01-29 16:51:33.124 - INFO 5752 [           main] f.a.AutowiredAnnotationBeanPostProcessor : JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-01-29 16:51:33.225 - INFO 5752 [           main] trationDelegate$BeanPostProcessorChecker : Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$262262b4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-01-29 16:51:34.691 - INFO 5752 [           main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2019-01-29 16:51:34.772 - INFO 5752 [           main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-01-29 16:51:34.944 - INFO 5752 [           main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-29 16:51:35.220 - INFO 5752 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-01-29 16:51:35.221 - INFO 5752 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-01-29 16:51:35.372 - INFO 5752 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-01-29 16:51:35.372 - INFO 5752 [           main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-01-29 16:51:35.411 - INFO 5752 [           main] c.sun.jersey.spi.service.ServiceFinder   : Running in a non-OSGi environment
+2019-01-29 16:51:35.418 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface com.sun.jersey.client.proxy.ViewProxyProvider
+2019-01-29 16:51:35.423 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface com.sun.jersey.spi.inject.InjectableProvider
+2019-01-29 16:51:35.429 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.SAXParserContextProvider
+2019-01-29 16:51:35.429 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.XMLStreamReaderContextProvider
+2019-01-29 16:51:35.429 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.DocumentBuilderFactoryProvider
+2019-01-29 16:51:35.429 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.xml.TransformerFactoryProvider
+2019-01-29 16:51:35.488 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyReader
+2019-01-29 16:51:35.518 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider
+2019-01-29 16:51:35.518 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider
+2019-01-29 16:51:35.518 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider
+2019-01-29 16:51:35.518 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider
+2019-01-29 16:51:35.519 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider
+2019-01-29 16:51:35.519 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider
+2019-01-29 16:51:35.519 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider
+2019-01-29 16:51:35.519 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider
+2019-01-29 16:51:35.519 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider
+2019-01-29 16:51:35.520 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App
+2019-01-29 16:51:35.520 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text
+2019-01-29 16:51:35.520 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General
+2019-01-29 16:51:35.520 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App
+2019-01-29 16:51:35.521 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text
+2019-01-29 16:51:35.521 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General
+2019-01-29 16:51:35.522 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App
+2019-01-29 16:51:35.523 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text
+2019-01-29 16:51:35.523 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General
+2019-01-29 16:51:35.523 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider
+2019-01-29 16:51:35.523 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider
+2019-01-29 16:51:35.524 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader
+2019-01-29 16:51:35.524 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader
+2019-01-29 16:51:35.524 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader
+2019-01-29 16:51:35.524 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App
+2019-01-29 16:51:35.524 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text
+2019-01-29 16:51:35.526 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General
+2019-01-29 16:51:35.526 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.EntityHolderReader
+2019-01-29 16:51:35.526 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.alibaba.fastjson.support.jaxrs.FastJsonProvider
+2019-01-29 16:51:35.550 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderFactory    : A dependent class, javax/mail/internet/MimeMultipart, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored.
+2019-01-29 16:51:35.765 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   : Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyWriter
+2019-01-29 16:51:35.768 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider
+2019-01-29 16:51:35.769 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider
+2019-01-29 16:51:35.769 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider
+2019-01-29 16:51:35.769 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider
+2019-01-29 16:51:35.769 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider
+2019-01-29 16:51:35.769 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider
+2019-01-29 16:51:35.769 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider
+2019-01-29 16:51:35.770 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider
+2019-01-29 16:51:35.770 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider
+2019-01-29 16:51:35.770 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App
+2019-01-29 16:51:35.770 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text
+2019-01-29 16:51:35.770 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General
+2019-01-29 16:51:35.770 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App
+2019-01-29 16:51:35.770 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text
+2019-01-29 16:51:35.771 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General
+2019-01-29 16:51:35.775 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App
+2019-01-29 16:51:35.775 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text
+2019-01-29 16:51:35.775 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General
+2019-01-29 16:51:35.775 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider
+2019-01-29 16:51:35.775 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider
+2019-01-29 16:51:35.776 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.StreamingOutputProvider
+2019-01-29 16:51:35.776 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter
+2019-01-29 16:51:35.776 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderServices   :     Provider found: class com.alibaba.fastjson.support.jaxrs.FastJsonProvider
+2019-01-29 16:51:35.777 - INFO 5752 [           main] c.s.j.c.spi.component.ProviderFactory    : A dependent class, javax/mail/internet/MimeMultipart, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored.
+2019-01-29 16:51:35.838 - INFO 5752 [           main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-01-29 16:51:36.007 - INFO 5752 [           main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-01-29 16:51:36.008 - INFO 5752 [           main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-01-29 16:51:36.008 - INFO 5752 [           main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-01-29 16:51:36.008 - INFO 5752 [           main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-01-29 16:51:36.008 - INFO 5752 [           main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-01-29 16:51:36.008 - INFO 5752 [           main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-01-29 16:51:36.008 - INFO 5752 [           main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-01-29 16:51:36.420 - INFO 5752 [           main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-01-29 16:51:36.424 - INFO 5752 [           main] com.netflix.discovery.DiscoveryClient    : Not registering with Eureka server per configuration
+2019-01-29 16:51:36.431 - INFO 5752 [           main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1548751896429 with initial instances count: 3
