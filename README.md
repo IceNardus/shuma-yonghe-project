@@ -33,4 +33,4 @@
       java -jar zipkin-server-2.11.12-exec.jar   --zipkin.collector.rabbitmq.addresses=10.20.0.66  
        --zipkin.collector.rabbitmq.username=shuma  --zipkin.collector.rabbitmq.password=q1w2e3r4
        
-      springAdmin 设置日志名时不可重复 如若不然 则会造成日志错乱 
+      springAdmin 设置日志名时不可重复 如若不然 则会造成日志错乱 11111 
