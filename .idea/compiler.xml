@@ -12,11 +12,11 @@
         <module name="min-dao" />
         <module name="min-service" />
         <module name="yonghe" />
-        <module name="yonghe-admin-server" />
         <module name="yonghe-api-gateway" />
         <module name="yonghe-config-server" />
         <module name="yonghe-hystrix-dashboard" />
         <module name="yonghe-min-feign" />
+        <module name="yonghe-server-admin" />
         <module name="yonghe-turbine-stream-rabbitmq" />
       </profile>
     </annotationProcessing>
@@ -38,6 +38,7 @@
       <module name="yonghe-hystrix-dashboard" target="1.8" />
       <module name="yonghe-min-feign" target="1.8" />
       <module name="yonghe-min-parent" target="1.8" />
+      <module name="yonghe-server-admin" target="1.8" />
       <module name="yonghe-turbine-stream-rabbitmq" target="1.8" />
       <module name="yonghe-zipkin" target="1.8" />
     </bytecodeTargetLevel>

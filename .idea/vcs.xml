@@ -3,6 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="svn" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/yonghe-admin-server" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/yonghe-server-admin" vcs="svn" />
   </component>
 </project>

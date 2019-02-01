@@ -13,11 +13,13 @@
         <option value="$PROJECT_DIR$/yonghe-min-feign/pom.xml" />
         <option value="$PROJECT_DIR$/yonghe-hystrix-dashboard/pom.xml" />
         <option value="$PROJECT_DIR$/yonghe-api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/yonghe-server-admin/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/coucou-giftcard-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/yonghe-admin-server/pom.xml" />
       </set>
     </option>
   </component>
