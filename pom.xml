@@ -22,5 +22,7 @@
         <module>yonghe-hystrix-dashboard</module>
         <module>yonghe-min-feign</module>
         <module>yonghe-turbine-stream-rabbitmq</module>
+        <module>yonghe-admin-server</module>
+        <module>yonghe-api-gateway</module>
     </modules>
 </project>
