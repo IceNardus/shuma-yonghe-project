@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/yonghe-min-parent/min-service/min-service.iml" filepath="$PROJECT_DIR$/yonghe-min-parent/min-service/min-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/shuma-yonghe-project.iml" filepath="$PROJECT_DIR$/shuma-yonghe-project.iml" />
       <module fileurl="file://$PROJECT_DIR$/yonghe/yonghe.iml" filepath="$PROJECT_DIR$/yonghe/yonghe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yonghe-admin-server/yonghe-admin-server.iml" filepath="$PROJECT_DIR$/yonghe-admin-server/yonghe-admin-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/yonghe-api-gateway/yonghe-api-gateway.iml" filepath="$PROJECT_DIR$/yonghe-api-gateway/yonghe-api-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/yonghe-config-server/yonghe-config-server.iml" filepath="$PROJECT_DIR$/yonghe-config-server/yonghe-config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/yonghe-hystrix-dashboard/yonghe-hystrix-dashboard.iml" filepath="$PROJECT_DIR$/yonghe-hystrix-dashboard/yonghe-hystrix-dashboard.iml" />
