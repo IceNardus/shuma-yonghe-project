@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yonghe" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yonghe-admin-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yonghe-api-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yonghe-config-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yonghe-hystrix-dashboard" charset="UTF-8" />
